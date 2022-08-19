@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class ADivisivelPorB {
     public static void main(String[] args) {
 		Scanner valorA = new Scanner(System.in);
-		System.out.println("Valor de A");
+		System.out.println("Valor de A ");
 		int A = valorA.nextInt();
 		Scanner valorB = new Scanner(System.in);
-		System.out.println("Valor de B");
+		System.out.println("Valor de B ");
 		int B = valorB.nextInt();
 		if(A < 1 || A > 1000 || B < 1 || B > 1000){
 			System.out.println("INVALIDO");

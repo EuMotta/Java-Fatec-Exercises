@@ -5,9 +5,9 @@ public class ADivisivelPorB {
 		Scanner valorA = new Scanner(System.in);
 		System.out.println("Valor de A");
 		int A = valorA.nextInt();
-		Scanner valorBa = new Scanner(System.in);
+		Scanner valorB = new Scanner(System.in);
 		System.out.println("Valor de B");
-		int B = valorBa.nextInt();
+		int B = valorB.nextInt();
 		if(A < 1 || A > 1000 || B < 1 || B > 1000){
 			System.out.println("INVALIDO");
 			}else if(A % B == 0){

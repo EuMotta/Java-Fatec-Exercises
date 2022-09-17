@@ -1,4 +1,4 @@
-//José Antonio Motta
+2//José Antonio Motta
 import java.util.Scanner;
 public class ADivisivelPorB {
     public static void main(String[] args) {
@@ -15,5 +15,6 @@ public class ADivisivelPorB {
 			}else{
 				System.out.println("Nao Divisivel");
 			}
+			
     }
 }

@@ -12,7 +12,7 @@ public class ex05 {
 			System.out.println(total);
 			System.out.println("NAO PODE VOTAR");
 		}else{
-			System.out.println("PODE VOTAR");
+			System.out.println("PODE  VOTAR");
 		}
 	}
 }

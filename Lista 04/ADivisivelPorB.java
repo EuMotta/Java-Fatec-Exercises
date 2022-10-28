@@ -1,4 +1,4 @@
-2//José Antonio Motta
+//José Antonio Motta
 import java.util.Scanner;
 public class ADivisivelPorB {
     public static void main(String[] args) {

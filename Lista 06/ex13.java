@@ -13,5 +13,6 @@ public class ex13 {
             }
         }
         System.out.println(soma);
+        num.close();
     }
 }

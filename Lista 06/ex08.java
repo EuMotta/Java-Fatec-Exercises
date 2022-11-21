@@ -15,6 +15,7 @@ public class ex08 {
 			}
 		}
 		System.out.println("Existem" + qtd + "valores negativos");
+		num.close();
 	}
 }
 

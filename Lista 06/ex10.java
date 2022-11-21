@@ -12,5 +12,6 @@ public class ex10 {
         }
         media = soma / 10;
         System.out.println("Média dos numeros: " + media);
+        numero.close();
     }
 }

@@ -12,5 +12,6 @@ public class ex12 {
         totalnum = totalnum + aux;
        }
        System.out.println(totalnum);
+       num.close();
     }
 }

@@ -12,6 +12,7 @@ public class ex07 {
 			
 				System.out.println(tab * i);
 		}
+		num.close();
 	}
 }
 

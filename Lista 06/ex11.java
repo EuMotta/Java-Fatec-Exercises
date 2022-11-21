@@ -13,5 +13,6 @@ public class ex11 {
        }
        double totalAritmetica = totalnota / qtdAlunos;
        System.out.println(totalAritmetica);
+       num.close();
     }
 }

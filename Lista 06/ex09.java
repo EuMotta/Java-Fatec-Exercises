@@ -14,6 +14,7 @@ public class ex09 {
         }
         System.out.println("entre 10 e 20: " + qtdd);
         System.out.println("Quatidade fora: " + qtdf);
+        num.close();
         
     }
 }

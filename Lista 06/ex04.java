@@ -9,6 +9,7 @@ public class ex04 {
 		for(int i = 0; i <= numero; i++){
 			System.out.println(i);
 		}
+		num.close();
 	}
 }
 

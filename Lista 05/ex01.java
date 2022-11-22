@@ -13,5 +13,6 @@ public class ex01 {
 		} else {
 			System.out.println("O VALOR e MENOR QUE 10");
 		}
+		num.close();
 	}
 }

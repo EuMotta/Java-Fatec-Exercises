@@ -4,7 +4,7 @@ public class ex09 {
         Scanner num = new Scanner(System.in);
         System.out.println("insira o tamanho do vetor até 20: ");  
         int[] vetor = new int[5], vetorpares = new int[5];
-        int soma = 0;
+        num.close();
         for (int i = 0; i < vetor.length; i++) {
             System.out.println("insira o " + (i+1) + " valor: ");
             vetor[i] = num.nextInt();

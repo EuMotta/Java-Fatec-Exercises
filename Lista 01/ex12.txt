@@ -1,2 +1,0 @@
-a. javac
-//José Antonio Motta

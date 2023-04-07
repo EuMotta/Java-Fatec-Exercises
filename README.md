@@ -1,2 +1,2 @@
-# LP-Java-Fatec-Exercises
-Exercícios em Java da matéria Linguagem de programação.
+Java-Fatec-Exercises
+Exercícios em Java realizados na FATEC.

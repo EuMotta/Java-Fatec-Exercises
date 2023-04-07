@@ -1,10 +1,4 @@
 
-/*
- * ex03.java
- * 
- * 
- * 
- */
 import java.util.Scanner;
 
 public class ex03 {

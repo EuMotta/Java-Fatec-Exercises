@@ -1,0 +1,9 @@
+//José Antonio Motta
+string
+int
+double
+boolean
+int
+float, double
+char
+float, double

@@ -1,9 +1,3 @@
-/*
- * ex05.java
- * 
- * 
- * 
- */
 
 import java.util.Scanner;
 

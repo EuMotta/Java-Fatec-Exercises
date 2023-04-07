@@ -1,6 +1,6 @@
 <p>
   <img src="https://i.ibb.co/w7BcGF3/logo-1.png" alt="Java Logo" width="200px" height="50px" align="right">
-  <h1 align="left"> Projeto de Exercícios em Java na FATEC Guaratinguetá </h1>
+  <h1 align="left"> Exercícios em Java realizados na FATEC Guaratinguetá </h1>
 </p>
 
 Este projeto contém uma série de exercícios em Java que abordam os conteúdos de Linguagem de Programação e Programação Orientada a Objetos da FATEC Guaratinguetá.

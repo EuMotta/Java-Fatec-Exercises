@@ -2,21 +2,21 @@ import java.util.Scanner;
 
 public class ex02 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner num = new Scanner(System.in);
         String opcao;
         do {
             System.out.println("[C] Celsius, [F] Fahrenheit e [S] Sair:");
-            opcao = sc.next().toUpperCase();
+            opcao = num.next().toUpperCase();
             switch (opcao) {
                 case "C":
                     System.out.print("Entre com a temperatura em Celsius: ");
-                    double temperaturaC = sc.nextDouble();
+                    double temperaturaC = num.nextDouble();
                     double temperaturaF = CPF(temperaturaC);
                     System.out.println("Temperatura em Fahrenheit: " + temperaturaF);
                     break;
                 case "F":
                     System.out.print("Entre com a temperatura em Fahrenheit: ");
-                    double temperaturaF2 = sc.nextDouble();
+                    double temperaturaF2 = num.nextDouble();
                     double temperaturaC2 = FPC(temperaturaF2);
                     System.out.println("Temperatura em Celsius: " + temperaturaC2);
                     break;
@@ -27,7 +27,7 @@ public class ex02 {
                     System.out.println("Opção inválida!");
             }
         } while (!opcao.equals("S"));
-        sc.close();
+        num.close();
     }
 
     public static double CPF(double temperaturaCelsius) {

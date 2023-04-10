@@ -17,6 +17,7 @@ public class ex14 {
     
     System.out.println("Array original: " + Arrays.toString(arr));
     System.out.println("Array invertido: " + Arrays.toString(arrInvertido));
+    num.close();
   }
 
   static int[] inverter(int arr[]) {

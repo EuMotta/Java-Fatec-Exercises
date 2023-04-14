@@ -8,49 +8,56 @@ public class SJF {
         int n = num.nextInt();
 
         // declaração das variaveis
-        int[] pid = new int[n], at = new int[n], bt = new int[n], ct = new int[n], ta = new int[n], wt = new int[n];
+        int[] pid = new int[n], tempoChegada = new int[n], tempoExec = new int[n], tempoFinal = new int[n], ta = new int[n], tempoEspera = new int[n];
 
         // Informar valores
+        //pid: processos
         for (int i = 0; i < n; i++) {
             System.out.print("Digite o tempo de chegada do processo " + (i + 1) + ": ");
-            at[i] = num.nextInt();
+            tempoChegada[i] = num.nextInt();
             System.out.print("Digite o tempo de execução do processo " + (i + 1) + ": ");
-            bt[i] = num.nextInt();
+            tempoExec[i] = num.nextInt();
             pid[i] = i + 1;
         }
 
         // executa o escalonamento
-        int completed = 0, current_time = 0;
-        while (completed < n) {
-            int shortest_index = -1, shortest_bt = Integer.MAX_VALUE;
+        int completo = 0, tempoAtual = 0;
+        while (completo < n) {
+            int menorTempo = -1, menorTE = Integer.MAX_VALUE;
+            /*  a variável "menorTempo" guarda o índice do processo 
+            com menor tempo de execução restante, a variável "menorTE" 
+            guarda o valor do menor tempo de execução restante*/
             for (int i = 0; i < n; i++) {
-                if (at[i] <= current_time && ct[i] == 0 && bt[i] < shortest_bt) {
-                    shortest_bt = bt[i];
-                    shortest_index = i;
+                if (tempoChegada[i] <= tempoAtual && tempoFinal[i] == 0 && tempoExec[i] < menorTE) {
+                    menorTE = tempoExec[i];
+                    menorTempo = i;
                 }
             }
-            if (shortest_index == -1) {
-                current_time++;
+            //Se não houver nenhum processo disponível para execução no momento, o tempo é incrementado
+            /*Se houver um processo disponível, então o tempo final de execução desse processo é definido como 
+            a soma do tempo atual e do tempo de execução desse processo*/
+            if (menorTempo == -1) {
+                tempoAtual++;
             } else {
-                ct[shortest_index] = current_time + bt[shortest_index];
-                ta[shortest_index] = ct[shortest_index] - at[shortest_index];
-                wt[shortest_index] = ta[shortest_index] - bt[shortest_index];
-                completed++;
-                current_time = ct[shortest_index];
+                tempoFinal[menorTempo] = tempoAtual + tempoExec[menorTempo];
+                ta[menorTempo] = tempoFinal[menorTempo] - tempoChegada[menorTempo];
+                tempoEspera[menorTempo] = ta[menorTempo] - tempoExec[menorTempo];
+                completo++;
+                tempoAtual = tempoFinal[menorTempo];
             }
         }
         // Exibir TME E TMP
-        float avgwt = 0, avgta = 0;
+        float avgtempoEspera = 0, avgta = 0;
         System.out.println("\nPID  Chegada  Execução  Conclusão  Turnaround  Espera");
         for (int i = 0; i < n; i++) {
-            avgwt += wt[i];
+            avgtempoEspera += tempoEspera[i];
             avgta += ta[i];
             System.out.println(
                     String.format("%-4s %-8s %-9s %-10s %-11s %s",
-                            " " + pid[i], "   " + at[i], "   " + bt[i], "    " + ct[i],"    " +  ta[i],"  " +  wt[i]));
+                            " " + pid[i], "   " + tempoChegada[i], "   " + tempoExec[i], "    " + tempoFinal[i],"    " +  ta[i],"  " +  tempoEspera[i]));
         }
         System.out.println("\nTempo médio de turnaround: " + (float) (avgta / n));
-        System.out.println("Tempo médio de espera: " + (float) (avgwt / n));
+        System.out.println("Tempo médio de espera: " + (float) (avgtempoEspera / n));
         num.close();
     }
 

@@ -12,5 +12,6 @@ public class Index {
     }
     double resultado = Media.media(arr);
     System.out.println(resultado);
+    num.close();
   }
 }

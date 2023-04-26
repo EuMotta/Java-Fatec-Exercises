@@ -1,5 +1,5 @@
 import java.util.UUID;
-public class Carrinho{
+public class Product{
   private String name;
   private String description;
   private UUID id;

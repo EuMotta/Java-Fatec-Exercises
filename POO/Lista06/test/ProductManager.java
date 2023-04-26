@@ -133,14 +133,14 @@ public class ProductManager {
               atributoValido = true;
               break;
 
-            case "descrição":
+            case "descricao":
               System.out.println("Digite a nova descrição:");
               produto.setDescription(num.next());
               System.out.println("Produto atualizado com sucesso!");
               atributoValido = true;
               break;
 
-            case "preço":
+            case "preco":
               System.out.println("Digite o novo preço:");
               produto.setPrice(num.nextDouble());
               System.out.println("Produto atualizado com sucesso!");

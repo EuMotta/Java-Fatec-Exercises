@@ -1,7 +1,5 @@
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.UUID;
 
 public class Index {
 
@@ -10,17 +8,14 @@ public class Index {
 
   public static void main(String[] args) {
     Scanner num = new Scanner(System.in);
-    Index index = new Index();
     int opcao;
     do {
       System.out.println("Escolha uma opção: ");
       opcao = num.nextInt();
       switch (opcao) {
-        /* Adicionar produtos */
         case 1:
           product.addProduct();
           break;
-        /* Exibir produtos */
         case 2:
           product.showProducts();
           break;

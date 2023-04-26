@@ -4,6 +4,15 @@ public class Product{
   private String description;
   private UUID id;
   private double price;
+  private int number;
+
+  public int getNumber() {
+  	return this.number;
+  }
+  public void setNumber(int number) {
+  	this.number = number;
+  }
+
 
   public String getName() {
   	return this.name;

@@ -5,11 +5,12 @@ import java.util.UUID;
 
 public class ProductManager {
   private static List<Product> listaDeProdutos = new ArrayList<>();
-
+  private int i = 0;
   public List<Product> getListaDeProdutos() {
     return listaDeProdutos;
   }
   public void addProduct() {
+
     Scanner num = new Scanner(System.in);
     do {
       System.out.println("Deseja adicionar um produto ao carrinho? (s/n)");
@@ -28,6 +29,7 @@ public class ProductManager {
         produto.setId(UUID.randomUUID());
         produto.setPrice(price);
         listaDeProdutos.add(produto);
+        produto.setNumber(++i);
         System.out.println("Produto adicionado com sucesso!");
 
       } else if (resposta.equalsIgnoreCase("n")) {
@@ -83,6 +85,7 @@ public class ProductManager {
     for (Product produto : listaDeProdutos) {
       System.out.println("Nome: " + produto.getName());
       System.out.println("Descrição: " + produto.getDescription());
+      System.out.println("Numero: " + produto.getNumber());
       System.out.println("ID: " + produto.getId());
       System.out.println("Preço: " + produto.getPrice());
       System.out.println("-----------------------");

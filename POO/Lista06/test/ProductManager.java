@@ -11,7 +11,7 @@ public class ProductManager {
   public List<Product> getListaDeProdutos() {
     return listaDeProdutos;
   }
-  
+
   /* Adicionar produtos Start */
   public void addProduct() {
 
@@ -40,10 +40,11 @@ public class ProductManager {
         break;
       }
     } while (true);
+    
   }
   /* Adicionar produtos End */
 
-  /* Deletar produtos Start*/
+  /* Deletar produtos Start */
   public void deleteProduct() {
     Scanner num = new Scanner(System.in);
     System.out.println("Digite o numero do produto:");
@@ -89,9 +90,11 @@ public class ProductManager {
       } else {
         System.out.println("Atributo invalido.");
       }
+      num.close();
     }
+
   }
-    /* Deletar produtos End*/
+  /* Deletar produtos End */
 
   /* Editar produtos Start */
   public void editProduct() {
@@ -159,9 +162,9 @@ public class ProductManager {
       System.out.println("Produto não encontrado.");
     }
   }
-    /* Editar produtos End */
+  /* Editar produtos End */
 
-  /* Mostrar produtos Start*/
+  /* Mostrar produtos Start */
   public void showProducts() {
     System.out.println("Produtos registrados:");
     for (Product produto : listaDeProdutos) {
@@ -173,5 +176,5 @@ public class ProductManager {
       System.out.println("-----------------------");
     }
   }
-    /* Mostrar produtos End*/
+  /* Mostrar produtos End */
 }

@@ -9,15 +9,21 @@ public class Index {
   public static void main(String[] args) {
     Scanner leia = new Scanner(System.in);
     System.out.println("Escolha uma opção: ");
-    System.out.println("admin");
-    System.out.println("usuario");
+    System.out.println("Admin");
+    System.out.println("Usuario");
     String opcao = leia.next();
-    if (opcao.equals("admin")) {
-      Admin admin = new Admin();
-      admin.showAdmin();
-    }if (opcao.equals("usuario")) {
-      System.out.println("em construção");
-    }
+
+    do {     
+      if (opcao.equals("admin")) {
+        Admin admin = new Admin();
+        admin.showAdmin();
+      } else if (opcao.equals("usuario")) {
+        System.out.println("em construção");
+        System.out.println("--------------\n");
+      } else {
+        break;
+      }
+    } while (!opcao.equals("admin"));
   }
 
 }

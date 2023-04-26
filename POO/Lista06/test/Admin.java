@@ -10,7 +10,12 @@ public class Admin {
     Scanner num = new Scanner(System.in);
     int opcao;
     do {
-      System.out.println("Escolha uma opção: ");
+      System.out.println("O que deseja fazer? ");
+      System.out.println("1 - Adicionar produto ");
+      System.out.println("2 - Visualizar produtos ");
+      System.out.println("3 - Editar produto ");
+      System.out.println("4 - Deletar produto ");
+      System.out.println("5 - Sair ");
       opcao = num.nextInt();
       switch (opcao) {
         case 1:

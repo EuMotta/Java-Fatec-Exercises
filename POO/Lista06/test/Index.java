@@ -22,10 +22,12 @@ public class Index {
         case 3:
           product.editProduct();
           break;
+        case 4:
+        product.deleteProduct();
         default:
           break;
       }
-    } while (opcao != 4);
+    } while (opcao != 5);
     num.close();
   }
   

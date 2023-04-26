@@ -40,6 +40,56 @@ public class ProductManager {
     } while (true);
   }
 
+  public void deleteProduct() {
+    Scanner num = new Scanner(System.in);
+    System.out.println("Digite o numero do produto:");
+    int number = num.nextInt();
+
+    boolean found = false;
+    UUID id = null;
+    for (Product produto : listaDeProdutos) {
+      if (produto.getNumber() == number) {
+        found = true;
+        id = produto.getId();
+        break;
+      }
+    }
+
+    if (!found) {
+      System.out.println("Produto não encontrado.");
+      return;
+    }
+    for (Product produto : listaDeProdutos) {
+      if (produto.getNumber() == number) {
+        System.out.println("Nome: " + produto.getName());
+        System.out.println("Descrição: " + produto.getDescription());
+        System.out.println("Numero: " + produto.getNumber());
+        System.out.println("ID: " + produto.getId());
+        System.out.println("Preço: " + produto.getPrice());
+        System.out.println("-----------------------");
+      }
+    }
+    while (true) {
+      System.out.println("Deseja realmente excluir o produto? (s/n)");
+      String delete = num.next().toLowerCase();
+      if (delete.charAt(0) == 's') {
+
+        for (int i = 0; i < listaDeProdutos.size(); i++) {
+          if (listaDeProdutos.get(i).getId().equals(id)) {
+            listaDeProdutos.remove(i);
+            System.out.println("Produto excluído com sucesso!");
+            return;
+          }
+        }
+
+      } else if (delete.charAt(0) == 'n') {
+        return;
+      } else {
+        System.out.println("Resposta inválida.");
+      }
+    }
+  }
+
   public void editProduct() {
     Scanner num = new Scanner(System.in);
     System.out.println("Digite o número do produto que deseja editar:");
@@ -67,7 +117,7 @@ public class ProductManager {
           System.out.println("Qual atributo você deseja editar? (nome/descrição/preço/sair)");
           String atributo = num.next();
           switch (atributo.toLowerCase()) {
-            
+
             case "nome":
               System.out.println("Digite o novo nome:");
               num.nextLine();
@@ -75,24 +125,24 @@ public class ProductManager {
               System.out.println("Produto atualizado com sucesso!");
               atributoValido = true;
               break;
-    
+
             case "descrição":
               System.out.println("Digite a nova descrição:");
               produto.setDescription(num.next());
               System.out.println("Produto atualizado com sucesso!");
               atributoValido = true;
               break;
-    
+
             case "preço":
               System.out.println("Digite o novo preço:");
               produto.setPrice(num.nextDouble());
               System.out.println("Produto atualizado com sucesso!");
               atributoValido = true;
               break;
-    
+
             case "sair":
               return;
-    
+
             default:
               System.out.println("Valor invalido, digite novamente.");
               break;

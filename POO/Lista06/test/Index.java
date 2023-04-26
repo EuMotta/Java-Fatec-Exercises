@@ -7,28 +7,17 @@ public class Index {
   List<Product> listaDeProdutos = product.getListaDeProdutos();
 
   public static void main(String[] args) {
-    Scanner num = new Scanner(System.in);
-    int opcao;
-    do {
-      System.out.println("Escolha uma opção: ");
-      opcao = num.nextInt();
-      switch (opcao) {
-        case 1:
-          product.addProduct();
-          break;
-        case 2:
-          product.showProducts();
-          break;
-        case 3:
-          product.editProduct();
-          break;
-        case 4:
-        product.deleteProduct();
-        default:
-          break;
-      }
-    } while (opcao != 5);
-    num.close();
+    Scanner leia = new Scanner(System.in);
+    System.out.println("Escolha uma opção: ");
+    System.out.println("admin");
+    System.out.println("usuario");
+    String opcao = leia.next();
+    if (opcao.equals("admin")) {
+      Admin admin = new Admin();
+      admin.showAdmin();
+    }if (opcao.equals("usuario")) {
+      System.out.println("em construção");
+    }
   }
-  
+
 }

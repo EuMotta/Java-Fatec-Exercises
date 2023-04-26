@@ -4,13 +4,15 @@ import java.util.Scanner;
 import java.util.UUID;
 
 public class ProductManager {
+  /* Criar lista de produtos */
   private static List<Product> listaDeProdutos = new ArrayList<>();
   private int i = 0;
 
   public List<Product> getListaDeProdutos() {
     return listaDeProdutos;
   }
-
+  
+  /* Adicionar produtos Start */
   public void addProduct() {
 
     Scanner num = new Scanner(System.in);
@@ -39,12 +41,13 @@ public class ProductManager {
       }
     } while (true);
   }
+  /* Adicionar produtos End */
 
+  /* Deletar produtos Start*/
   public void deleteProduct() {
     Scanner num = new Scanner(System.in);
     System.out.println("Digite o numero do produto:");
     int number = num.nextInt();
-
     boolean found = false;
     UUID id = null;
     for (Product produto : listaDeProdutos) {
@@ -88,7 +91,9 @@ public class ProductManager {
       }
     }
   }
+    /* Deletar produtos End*/
 
+  /* Editar produtos Start */
   public void editProduct() {
     Scanner num = new Scanner(System.in);
     System.out.println("Digite o número do produto que deseja editar:");
@@ -154,9 +159,11 @@ public class ProductManager {
       System.out.println("Produto não encontrado.");
     }
   }
+    /* Editar produtos End */
 
+  /* Mostrar produtos Start*/
   public void showProducts() {
-    System.out.println("Produtos no carrinho:");
+    System.out.println("Produtos registrados:");
     for (Product produto : listaDeProdutos) {
       System.out.println("Nome: " + produto.getName());
       System.out.println("Descrição: " + produto.getDescription());
@@ -166,4 +173,5 @@ public class ProductManager {
       System.out.println("-----------------------");
     }
   }
+    /* Mostrar produtos End*/
 }

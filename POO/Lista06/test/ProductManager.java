@@ -73,7 +73,6 @@ public class ProductManager {
       System.out.println("Deseja realmente excluir o produto? (s/n)");
       String delete = num.next().toLowerCase();
       if (delete.charAt(0) == 's') {
-
         for (int i = 0; i < listaDeProdutos.size(); i++) {
           if (listaDeProdutos.get(i).getId().equals(id)) {
             listaDeProdutos.remove(i);
@@ -85,7 +84,7 @@ public class ProductManager {
       } else if (delete.charAt(0) == 'n') {
         return;
       } else {
-        System.out.println("Resposta inválida.");
+        System.out.println("Atributo invalido.");
       }
     }
   }

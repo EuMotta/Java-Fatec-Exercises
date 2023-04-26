@@ -6,9 +6,11 @@ import java.util.UUID;
 public class ProductManager {
   private static List<Product> listaDeProdutos = new ArrayList<>();
   private int i = 0;
+
   public List<Product> getListaDeProdutos() {
     return listaDeProdutos;
   }
+
   public void addProduct() {
 
     Scanner num = new Scanner(System.in);
@@ -40,18 +42,32 @@ public class ProductManager {
 
   public void editProduct() {
     Scanner num = new Scanner(System.in);
-    System.out.println("Digite o ID do produto que deseja editar:");
-    UUID id = UUID.fromString(num.next());
+    System.out.println("Digite o número do produto que deseja editar:");
+    int number = num.nextInt();
 
     boolean found = false;
+    UUID id = null;
+    for (Product produto : listaDeProdutos) {
+      if (produto.getNumber() == number) {
+        found = true;
+        id = produto.getId();
+        break;
+      }
+    }
+
+    if (!found) {
+      System.out.println("Produto não encontrado!");
+      return;
+    }
+
     for (Product produto : listaDeProdutos) {
       if (produto.getId().equals(id)) {
-        found = true;
         System.out.println("Qual atributo você deseja editar? (nome/descrição/preço)");
         String atributo = num.next();
         switch (atributo.toLowerCase()) {
           case "nome":
             System.out.println("Digite o novo nome:");
+            num.nextLine();
             produto.setName(num.nextLine());
             System.out.println("Produto atualizado com sucesso!");
             break;

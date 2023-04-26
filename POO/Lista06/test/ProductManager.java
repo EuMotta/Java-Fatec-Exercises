@@ -62,37 +62,47 @@ public class ProductManager {
 
     for (Product produto : listaDeProdutos) {
       if (produto.getId().equals(id)) {
-        System.out.println("Qual atributo você deseja editar? (nome/descrição/preço)");
-        String atributo = num.next();
-        switch (atributo.toLowerCase()) {
-          case "nome":
-            System.out.println("Digite o novo nome:");
-            num.nextLine();
-            produto.setName(num.nextLine());
-            System.out.println("Produto atualizado com sucesso!");
-            break;
-
-          case "descrição":
-            System.out.println("Digite a nova descrição:");
-            produto.setDescription(num.next());
-            System.out.println("Produto atualizado com sucesso!");
-            break;
-
-          case "preço":
-            System.out.println("Digite o novo preço:");
-            produto.setPrice(num.nextDouble());
-            System.out.println("Produto atualizado com sucesso!");
-            break;
-
-          default:
-            System.out.println("Atributo inválido!");
-            break;
-        }
+        boolean atributoValido = false;
+        do {
+          System.out.println("Qual atributo você deseja editar? (nome/descrição/preço/sair)");
+          String atributo = num.next();
+          switch (atributo.toLowerCase()) {
+            
+            case "nome":
+              System.out.println("Digite o novo nome:");
+              num.nextLine();
+              produto.setName(num.nextLine());
+              System.out.println("Produto atualizado com sucesso!");
+              atributoValido = true;
+              break;
+    
+            case "descrição":
+              System.out.println("Digite a nova descrição:");
+              produto.setDescription(num.next());
+              System.out.println("Produto atualizado com sucesso!");
+              atributoValido = true;
+              break;
+    
+            case "preço":
+              System.out.println("Digite o novo preço:");
+              produto.setPrice(num.nextDouble());
+              System.out.println("Produto atualizado com sucesso!");
+              atributoValido = true;
+              break;
+    
+            case "sair":
+              return;
+    
+            default:
+              System.out.println("Valor invalido, digite novamente.");
+              break;
+          }
+        } while (!atributoValido);
         break;
       }
     }
     if (!found) {
-      System.out.println("Produto não encontrado!");
+      System.out.println("Produto não encontrado.");
     }
   }
 

@@ -66,29 +66,32 @@ public class ProductManager {
   }
   /* Adicionar produtos End */
 
-  public void loadProducts() {
+
+public void loadProducts() {
     try {
-      File file = new File("products.txt");
-      Scanner scanner = new Scanner(file);
-      int i = 0;
-      while (scanner.hasNextLine()) {
-        String line = scanner.nextLine();
-        String[] parts = line.split(", ");
-        String name = parts[0].split(": ")[1];
-        String description = parts[1].split(": ")[1];
-        double price = Double.parseDouble(parts[2].split(": ")[1]);
-        Product product = new Product();
-        product.setName(name);
-        product.setDescription(description);
-        product.setPrice(price);
-        product.setNumber(++i);
-        listaDeProdutos.add(product);
-      }
-      scanner.close();
+        File file = new File("products.txt");
+        Scanner scanner = new Scanner(file);
+        int i = 0;
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] parts = line.split(", ");
+            UUID id = UUID.fromString(parts[4].split(": ")[1]);
+            String name = parts[1].split(": ")[1];
+            String description = parts[2].split(": ")[1];
+            double price = Double.parseDouble(parts[3].split(": ")[1]);
+            Product product = new Product();
+            product.setId(id);
+            product.setName(name);
+            product.setDescription(description);
+            product.setPrice(price);
+            product.setNumber(++i);
+            listaDeProdutos.add(product);
+        }
+        scanner.close();
     } catch (FileNotFoundException e) {
-      e.printStackTrace();
+        e.printStackTrace();
     }
-  }
+}
 
   /* Deletar produtos Start */
   public void deleteProduct() {
@@ -225,7 +228,6 @@ public class ProductManager {
 
   /* Mostrar produtos Start */
   public void showProducts() {
-    loadProducts();
     System.out.println("Produtos registrados:");
     for (Product produto : listaDeProdutos) {
       System.out.println("Nome: " + produto.getName());
@@ -254,7 +256,7 @@ public class ProductManager {
 
   public void saveProducts() {
     try {
-      FileWriter writer = new FileWriter("products.txt", true);
+      FileWriter writer = new FileWriter("products.txt");
       for (Product product : listaDeProdutos) {
         writer.write(product.toString() + "\n");
       }

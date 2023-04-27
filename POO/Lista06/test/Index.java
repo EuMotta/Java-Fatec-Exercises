@@ -7,6 +7,7 @@ public class Index {
   List<Product> listaDeProdutos = product.getListaDeProdutos();
 
   public static void main(String[] args) {
+    product.loadProducts(); // carregar os produtos para não sobreescrever
     Scanner leia = new Scanner(System.in);
     System.out.println("Escolha uma opção: ");
     System.out.println("Admin");

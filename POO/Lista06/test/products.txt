@@ -1,0 +1,5 @@
+Nome: teste, Descrição: produto, Preço: 2500.0, Numero: 4, ID: ebbb4678-a783-4b35-af08-59a910794bab
+Nome: aaaa, Descrição: aaaaaa, Preço: 222.0, Numero: 5, ID: b9606a2e-528b-4741-9919-e80f898c3049
+Nome: teste, Descrição: produto, Preço: 2500.0, Numero: 1, ID: null
+Nome: aaaa, Descrição: aaaaaa, Preço: 222.0, Numero: 2, ID: null
+Nome: aa, Descrição: aaaaa, Preço: 222.0, Numero: 6, ID: cf721cf7-5a1b-4fb5-b4d0-138bcdeeab39

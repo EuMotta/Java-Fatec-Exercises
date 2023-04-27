@@ -101,60 +101,48 @@ public void loadProducts() {
     boolean found = false;
     UUID id = null;
     for (Product produto : listaDeProdutos) {
-      if (produto.getNumber() == number) {
-        found = true;
-        id = produto.getId();
-        break;
-      }
+        if (produto.getNumber() == number) {
+            found = true;
+            id = produto.getId();
+            break;
+        }
     }
 
     if (!found) {
-      System.out.println("Produto não encontrado.");
-      return;
+        System.out.println("Produto não encontrado.");
+        return;
     }
     for (Product produto : listaDeProdutos) {
-      if (produto.getNumber() == number) {
-        System.out.println("Nome: " + produto.getName());
-        System.out.println("Descrição: " + produto.getDescription());
-        System.out.println("Numero: " + produto.getNumber());
-        System.out.println("ID: " + produto.getId());
-        System.out.println("Preço: " + produto.getPrice());
-        System.out.println("-----------------------");
-      }
+        if (produto.getNumber() == number) {
+            System.out.println("Nome: " + produto.getName());
+            System.out.println("Descrição: " + produto.getDescription());
+            System.out.println("Numero: " + produto.getNumber());
+            System.out.println("ID: " + produto.getId());
+            System.out.println("Preço: " + produto.getPrice());
+            System.out.println("-----------------------");
+        }
     }
     while (true) {
-      System.out.println("Deseja realmente excluir o produto? (s/n)");
-      String delete = num.next().toLowerCase();
-      if (delete.charAt(0) == 's') {
-        for (int i = 0; i < listaDeProdutos.size(); i++) {
-          if (listaDeProdutos.get(i).getId().equals(id)) {
-            listaDeProdutos.remove(i);
-            System.out.println("Produto excluído com sucesso!");
-            return;
-          }
-        }
+        System.out.println("Deseja realmente excluir o produto? (s/n)");
+        String delete = num.next().toLowerCase();
+        if (delete.charAt(0) == 's') {
+            for (int i = 0; i < listaDeProdutos.size(); i++) {
+                if (listaDeProdutos.get(i).getId().equals(id)) {
+                    listaDeProdutos.remove(i);
+                    System.out.println("Produto excluído com sucesso!");
+                    saveProducts();
+                    return;
+                }
+            }
 
-      } else if (delete.charAt(0) == 'n') {
-        return;
-      }
-      if (delete.charAt(0) == 's') {
-        for (int i = 0; i < listaDeProdutos.size(); i++) {
-          if (listaDeProdutos.get(i).getId().equals(id)) {
-            listaDeProdutos.remove(i);
-            System.out.println("Produto excluído com sucesso!");
-            saveProducts();
+        } else if (delete.charAt(0) == 'n') {
             return;
-          }
+        } else {
+            System.out.println("Atributo invalido.");
         }
-      } else if (delete.charAt(0) == 'n') {
-        return;
-      } else {
-        System.out.println("Atributo invalido.");
-      }
-      num.close();
+        num.close();
     }
-
-  }
+}
   /* Deletar produtos End */
 
   /* Editar produtos Start */

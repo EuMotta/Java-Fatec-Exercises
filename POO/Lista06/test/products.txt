@@ -1,2 +1,1 @@
-Nome: aaaaa, Descrição: 22.0, Preço: 2.0, Numero: 1, ID: 9c1ac0dc-d254-426a-879d-3a45fe42dddc
-Nome: aaa, Descrição: aaaaa, Preço: 22.0, Numero: 3, ID: 3faab67f-d4c4-4d7c-b64f-03bebdc30ab9
+Nome: funcionou, Descrição: aaaaaa, Preço: 222.0, Numero: 6, ID: b7adbe64-f2c1-4fd0-8992-3a8380fd30f5

@@ -1,7 +1,7 @@
 <p align="center">
 
   <img src="https://www.svgrepo.com/show/453791/matrix.svg" alt="Matriz Logo" width="200px" height="50px" align="right">
-  <h1 align="left"> Exercicios de Matriz </h1>
+  <h1 align="left"> Exercicios de Métodos </h1>
 
 </p>
 
@@ -20,6 +20,30 @@
 
 ### Exercício 2
 
-> Escreva um programa em Java para gerar aleatoriamente os elementos (menor que 100) de uma matriz B de 6 linhas por 3 colunas, imprimir a matriz gerada e imprimir a matriz em ordem invertida.
+> Crie programa que solicite ao usuário um número tipo double. Após verifique se o número é 
+zero ou não. A verificação deve ser feita através de um método que receba um valor (parâmetro de 
+entrada) e informe se ele é zero ou não através de um retorno do tipo boolean. Declare como: boolean 
+isZero ( double num ).
 
+| Entrada | Saída |
+|:------:|:-----------:|
+| Entre com um número | É zero ou não |
+| -1,48 | O número -1.48 não é zero |
+| 3,14 | O número 3.14 não é zero |
+| 0 | O número 0.0 é zero |
+
+---
+
+### Exercício 3
+
+> Com base nos dois exercícios anteriores, crie programa que solicite ao usuário um número 
+tipo double. Após verifique se o número é positivo, negativo ou zero. As verificações devem ser feitas
+através de métodos.
+
+| Entrada | Saída |
+|:------:|:-----------:|
+| Entre com um número | Positivo, negativo ou zero |
+| -1,48 | O número -1.48 é negativo |
+| 3,14 | O número 3.14 é positivo |
+| 0 | O número 0.0 é zero |
 ---

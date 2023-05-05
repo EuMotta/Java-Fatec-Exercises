@@ -24,7 +24,6 @@
 
 * [Sobre o projeto](#sobre-o-projeto)
 * [Linguagem](#linguagem)
-* [License](#license)
 
 ## Sobre o projeto
 
@@ -39,9 +38,4 @@ Exercícios separados:
 ## Linguagem
 
 Os exercícios foram desenvolvidos em Java, uma linguagem de programação orientada a objetos.
-
-
-## License
-
-Distributed under the MIT License. See [LICENSE](https://github.com/eumotta/Java-Fatec-Exercises/blob/main/LICENSE.md) for more information.
 

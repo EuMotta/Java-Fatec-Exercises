@@ -46,4 +46,29 @@ através de métodos.
 | -1,48 | O número -1.48 é negativo |
 | 3,14 | O número 3.14 é positivo |
 | 0 | O número 0.0 é zero |
+
+---
+
+### Exercício 4
+
+> Escreva um programa que solicite 3 (três) valores double e calcule a Equação do Segundo 
+Grau. O primeiro valor será o ‘a’, o segundo o ‘b’ e o último o ‘c’. Crie um método que receba três valores, 
+'a', 'b' e 'c', que são os coeficientes da equação do segundo grau e retorne o valor do delta, que é dado por 
+'b² - 4ac'.
+
+| Entrada | Saída |
+|:------:|:-----------:|
+| Entre com um número | É zero ou não |
+| a: 1 b: -1 c: -12| Delta é 49 |
+| a: 1 b: -4 c: -5 | Delta é 36 |
+
+---
+
+### Exercício 5
+
+> Escreva um programa que solicite 3 (três) valores double e calcule a Equação do Segundo 
+Grau. O primeiro valor será o ‘a’, o segundo o ‘b’ e o último o ‘c’. Crie um método que receba três valores, 
+'a', 'b' e 'c', que são os coeficientes da equação do segundo grau e retorne o valor do delta, que é dado por 
+'b² - 4ac'.
+
 ---

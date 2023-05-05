@@ -137,3 +137,17 @@ método da fatoração em números primos.
 | 162 <br> 90 | 18 | 162, 90 &#124; 2 [√] <br> 81, 45 &#124; 3 [√] <br> 27, 15 &#124; 3 [√] <br> 9, 5 &#124; 3 [x] <br> 3, 5 &#124; 3 [x] <br> 1, 5 &#124; 5 [x] <br> 1, 1 &#124; <br>  1 * 2 * 3 * 3 = 18 |
 | 23 <br> 21 | 1 | 23,21 &#124; 3 [x]<br>23,7 &#124; 7 [x]<br>23,1 &#124; 23 [x]<br>1,1 &#124; <br> 1 =1|
 ---
+
+### Exercício 6
+
+>   Crie um programa que solicite ao usuário um número inteiro, que representará a quantidade de números inteiros que serão digitados em seguida e armazenados em um array. Através de um método que receba esse array de números inteiros como parâmetro de entrada, calcule e retorne o MDC (Máximo Divisor Comum) desse conjunto de dados. Valide as entradas para aceitar apenas números positivos (pode ser um método). 
+
+| Entrada | Saída | Cálculo |
+|:------:|:-----------:|:-----------:|
+| Entre com a quantidade de termos | MDC | Fórmula utilizada |
+| 5 <br> 10 <br> 50 <br> 30 <br> 20 <br> 40 | 10 | 10, 50, 30, 20, 40 &#124; 2 [√] <br> 5, 25, 15, 10, 20 &#124; 2 [x] <br> 5, 25, 15 ,5 ,10 &#124; 2 [x] <br> 5, 25, 15, 5, 5 &#124; 3 [x] <br> 5, 25, 5, 5, 5 &#124; 5 [√] <br>1, 5, 1, 1, 1 &#124; 5 [x] <br>1,1 ,1 ,1 ,1 &#124; <br> 1 *2 *5 =10 |
+|3 <br>45 <br>27 <br>36 |9 |45 ,27 ,36 &#124;2 [x]<br>45 ,27 ,18 &#124;2 [x]<br>45 ,27 ,9 &#124;3 [√]<br>15 ,9 ,3 &#124;3 [√]<br>5 ,3 ,1 &#124;3 [x]<br>5 ,1 ,1 &#124;5 [x]<br>1 ,1 ,1 &#124; <br> 1 *3 *3 =9|
+|2 <br>162 <br>90 |18 |162 ,90 &#124; 2 [√]<br>81 ,45 &#124; 3 [√]<br>27 ,15 &#124; 3 [√]<br>9 ,5 &#124; 3 [x]<br>3 ,5 &#124; 3 [x]<br>1 ,5 &#124; 5 [x]<br>1 ,1 &#124;  <br> 1 *2 *3 *3 =18|
+|1 <br>23 |23 |23 &#124; 23 [√]<br>1 &#124; <br>  1 * 23 = 23|
+|0 |- |- |
+|-7 |Erro! Valor inválido |- |

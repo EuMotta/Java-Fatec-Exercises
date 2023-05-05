@@ -185,6 +185,21 @@ Assim, o MMC de 4, 6 e 12 é o produto entre 2² x 3 = 4 x 3 = 12.
 |:------:|:-----------:|:-----------:|
 | Entre com um valor | MMC | Fórmula utilizada |
 | 10 <br> 20 | 20 | 10, 20 &#124; 2 <br> 5, 10 &#124; 2 <br> 5, 5 &#124; 5 <br> 1, 1 &#124; 2 * 2 * 5 = 20 |
-| 162 <br> 90 | 810 | 162, 90 &#124; 2 <br> 81, 45 &#124; 3 <br> 27, 15 &#124; 3 <br>9,5 &#124; 3 <br>3 ,5 &#124; 3 <br>1 ,5 &#124; 5 <br>1 ,1 &#124; <br> 2 *3 *3 *3 *3 *5 = 810|
-|23 <br>21 |483 |23 ,21 &#124;  <br>23 ,7 &#124;  <br>23 ,1 &#124; 3 <br>1 ,1 &#124; <br> 3 *7 *23 = 483|
+| 162 <br> 90 | 810 | 162, 90 &#124; 2 <br> 81, 45 &#124; 3 <br> 27, 15 &#124; 3 <br>9,5 &#124; 3 <br>3 ,5 &#124; 3 <br>1 ,5 &#124; 5 <br>1 ,1 &#124; <br> 2 * 3 * 3 * 3 * 3 * 5 = 810|
+|23 <br>21 |483 |23 ,21 &#124;  <br>23 ,7 &#124;  <br>23 ,1 &#124; 3 <br>1 ,1 &#124; <br> 3 * 7 * 23 = 483|
+---
+
+### Exercício 8
+
+> Crie um programa que solicite ao usuário um número inteiro, que representará a quantidade de números inteiros que serão digitados em seguida e armazenados em um  array. Através de um método que receba esse array de números inteiros como parâmetro de entrada, calcule e retorne o MMC (Mínimo Múltiplo Comum) desse conjunto de dados. Valide as entradas para aceitar apenas números positivos (pode ser um método). Utilize decomposição simultânea ou fatoração simultânea.
+
+| Entrada | Saída | Cálculo |
+|:------:|:-----------:|:-----------:|
+| Entre com a quantidade de termos | MMC | Fórmula utilizada |
+| 4 <br> 40 <br> 50 <br> 30 <br> 20 | 600 | 40, 50, 30, 20 &#124; 2 <br> 20, 25, 15, 10 &#124; 2 <br> 10, 25, 15, 5 &#124; 2 <br>5 ,25 ,15 ,5 &#124;3 <br>5 ,25 ,5 ,5 &#124;5 <br>1 ,5 ,1 ,1 &#124;5 <br>1 ,1 ,1 ,1 &#124; <br> 2 * 2 * 2 * 3 * 5 * 5 = 600|
+|3 <br>45 <br>27 <br>36 |540 |45 ,27 ,36 &#124;2 <br>45 ,27 ,18 &#124; 2 <br>45 ,27 ,9 &#124; 3 <br>15 ,9 ,3 &#124; 3 <br>5 ,3 ,1 &#124; 3 <br>5 ,1 ,1 &#124; 5 <br>1 ,1 ,1 &#124; <br> 1 * 2 * 2 * 3 * 3 * 3 * 5 = 540|
+|2 <br>8 <br>4 |8 |8 ,4 &#124; 2 <br>4 ,2 &#124; 2 <br>2 ,1 &#124; 2 <br>1 ,1 &#124; <br> 2 * 2 * 2 = 8|
+|1 |- |Erro! Valor inválido. |
+|0 |- |- |
+|-7 |Erro! Valor inválido. |- |
 ---

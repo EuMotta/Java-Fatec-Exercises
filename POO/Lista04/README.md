@@ -43,3 +43,14 @@
 | [C]Celsius, [F] Fahrenheit, [K] Kelvin e [S] Sair: K <br> Entre com a temperatura: 0  | C: -273 e F: -459,4  | [ C = 0 – 273 ] <br> [ F = (9 * (0 – 273) / 5) + 32 ] |
 
 ---
+
+### Exercício 4
+
+>  Um professor, muito legal, fez 3 provas durante um semestre, mas só vai levar em conta as duas notas mais altas para calcular a média. Crie um programa que solicite ao usuário o valor double das 3 notas, mostre como seria a média com essas 3 provas, a média com as 2 notas mais altas, bem como a nota mais alta e a nota mais baixa. Tente criar apenas um método para retornar essas médias. Este método deverá receber as 3 notas como parâmetros de entrada e retornar os valores solicitados. As notas devem ser de zero a dez e qualquer valor diferente deverá ser desconsiderado, assumindo zero.
+
+| Entrada | Saída | Cálculo |
+|:------:|:-----------:|:-----------:|
+| Entre com a nota | Resultado | Formula utilizada |
+| 6 ; 8 ; 4 | Média maiores: 7 <br> Média aritmética: 6 <br> Maior nota: 8 <br> Menor nota: 4  | [ (6 + 8) / 2 ] <br> [ (6 + 8 + 4) / 3 ] <br> [ 6, __8___, 4 ] <br> [ 6, 8, __4__ ] |
+| 6 ; 8 ; 14 | Média maiores: 7 <br> Média aritmética: 4,7 <br> Maior nota: 8 <br> Menor nota: 0  | [ (6 + 8) / 2 ] <br> [ (6 + 8 + 0 ) / 3 ] <br> [ 6, __8__, 0 ] <br> [ 6, 8, __0__ ] |
+---

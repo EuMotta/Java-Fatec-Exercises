@@ -126,7 +126,7 @@ método da fatoração em números primos.
 <br>
 <br>
 
-### Exercício 6
+### Exercício 7
 
 >   Crie um programa que solicite ao usuário dois números inteiros. Através de um método que receba esses dois números inteiros como parâmetro de entrada, calcule e retorne o MDC (Máximo Divisor Comum) destes números fornecidos. 
 
@@ -138,7 +138,7 @@ método da fatoração em números primos.
 | 23 <br> 21 | 1 | 23,21 &#124; 3 [x]<br>23,7 &#124; 7 [x]<br>23,1 &#124; 23 [x]<br>1,1 &#124; <br> 1 =1|
 ---
 
-### Exercício 6
+### Exercício 8
 
 >   Crie um programa que solicite ao usuário um número inteiro, que representará a quantidade de números inteiros que serão digitados em seguida e armazenados em um array. Através de um método que receba esse array de números inteiros como parâmetro de entrada, calcule e retorne o MDC (Máximo Divisor Comum) desse conjunto de dados. Valide as entradas para aceitar apenas números positivos (pode ser um método). 
 
@@ -177,7 +177,7 @@ Assim, o MMC de 4, 6 e 12 é o produto entre 2² x 3 = 4 x 3 = 12.
 <br>
 <br>
 
-### Exercício 7
+### Exercício 9
 
 > Crie um programa que solicite ao usuário dois números inteiros. Através de um método que receba esses dois números inteiros como parâmetro de entrada, calcule e retorne o MMC (Mínimo últiplo Comum) destes números fornecidos. Utilize decomposição simultânea ou fatoração simultânea.
 
@@ -189,7 +189,7 @@ Assim, o MMC de 4, 6 e 12 é o produto entre 2² x 3 = 4 x 3 = 12.
 |23 <br>21 |483 |23 ,21 &#124;  <br>23 ,7 &#124;  <br>23 ,1 &#124; 3 <br>1 ,1 &#124; <br> 3 * 7 * 23 = 483|
 ---
 
-### Exercício 8
+### Exercício 10
 
 > Crie um programa que solicite ao usuário um número inteiro, que representará a quantidade de números inteiros que serão digitados em seguida e armazenados em um  array. Através de um método que receba esse array de números inteiros como parâmetro de entrada, calcule e retorne o MMC (Mínimo Múltiplo Comum) desse conjunto de dados. Valide as entradas para aceitar apenas números positivos (pode ser um método). Utilize decomposição simultânea ou fatoração simultânea.
 
@@ -202,4 +202,46 @@ Assim, o MMC de 4, 6 e 12 é o produto entre 2² x 3 = 4 x 3 = 12.
 |1 |- |Erro! Valor inválido. |
 |0 |- |- |
 |-7 |Erro! Valor inválido. |- |
+---
+
+<br>
+<br>
+
+<p align="center">
+
+  <h1 align="center"> Números perfeitos </h1>
+  
+ Em Matemática, um número perfeito é um número inteiro para o qual a soma de todos os seus 
+divisores positivos próprios (excluindo ele mesmo) é igual ao próprio número. Por exemplo, o 
+número 6 é um número perfeito, pois: 6 = 1 + 2 + 3. O próximo número perfeito é o 28, pois: 28 = 
+1 + 2 + 4 + 7 + 14. Todo número perfeito é um número triangular, bem como um número 
+hexagonal. Temos os seguintes números na sequência de números perfeitos: 6, 28, 496, 8.128, 
+33.550.336, 8.589.869.056, ...
+</p>
+
+<br>
+<br>
+
+### Exercício 11
+
+> Crie um programa que solicite ao usuário um número inteiro, que representará a quantidade de números inteiros que serão digitados em seguida e armazenados em um  array. Através de um método que receba esse array de números inteiros como parâmetro de entrada, calcule e retorne o MMC (Mínimo Múltiplo Comum) desse conjunto de dados. Valide as entradas para aceitar apenas números positivos (pode ser um método). Utilize decomposição simultânea ou fatoração simultânea.
+
+| Entrada | Saída | 
+|:------:|:-----------:|
+| 6 | O número 6 é perfeito |
+| 11 | O número 11 não é perfeito  |
+| -4 | Erro! Valor inválido  |
+| 0 | Erro! Valor inválido |
+---
+
+### Exercício 12
+
+> Crie um programa que solicite ao usuário um número inteiro. Utilizando métodos, exiba a sequência dos números perfeito até o número informado.
+
+| Entrada | Saída | 
+|:------:|:-----------:|
+| 10 | 6 |
+| 50 | 6 ; 28  |
+| -4 | Erro! Valor inválido  |
+| 0 | Erro! Valor inválido |
 ---

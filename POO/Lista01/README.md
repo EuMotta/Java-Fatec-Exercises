@@ -163,10 +163,10 @@ matriz. Imprimir a matriz e os vetores. Validar para caso não haja uma das duas
 Exemplo:
 Quantidade de elementos: 4
 
-Vetor gerado:	3, 5, 1, 6
-Matriz gerada:	3, 1, 2, 3
-	5, 1, 2, 3, 5, 7
-	1, 1
-	6, 1, 2, 3, 5, 7, 11
+Vetor gerado:	3, 5, 1, 6 <br>
+Matriz gerada:	<br>3, 1, 2, 3<br>
+	5, 1, 2, 3, 5, 7<br>
+	1, 1<br>
+	6, 1, 2, 3, 5, 7, 11<br>
 
 ---

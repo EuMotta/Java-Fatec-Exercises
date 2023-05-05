@@ -245,3 +245,28 @@ hexagonal. Temos os seguintes números na sequência de números perfeitos: 6, 2
 | -4 | Erro! Valor inválido  |
 | 0 | Erro! Valor inválido |
 ---
+
+### Exercício 13
+
+> Crie um programa que solicite ao usuário um número inteiro, que representará a quantidade de números inteiros que serão digitados em seguida e armazenados em um  array. Através de um método que receba esse array de números inteiros como parâmetro de entrada. Este método deverá retornar, apenas, os números perfeitos existentes no conjunto recebido.
+
+| Entrada | Saída | 
+|:------:|:-----------:|
+| Entre com a quantidade de termos: 4 <br> Entre com 1º número: 31 <br> Entre com 2º número: 72 <br> Entre com 3º número: 486 <br> Entre com 4º número: 28 | 496 ; 28 |
+| Entre com a quantidade de termos: 3 <br> Entre com 1º número: 5 <br> Entre com 2º número: 6 <br> Entre com 3º número: 7  | 6 |
+| Entre com a quantidade de termos: -5 | Erro! Valor inválido  |
+| Entre com a quantidade de termos: 0 | Erro! Valor inválido |
+---
+
+### Exercício 13
+
+> Crie um programa que solicite ao usuário um número inteiro. Através de um método que receba esse número inteiro como parâmetro de entrada, inverta dígito-a-dígito e retorne um valor inteiro com o número invertido.
+
+| Entrada | Saída | 
+|:------:|:-----------:|
+| Entre com um número | Resultado |
+| 12  | 21 |
+| 430 | 34  |
+| -27 | -72  |
+| 0 | 0 |
+---

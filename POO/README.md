@@ -1,9 +1,3 @@
-
-
-# <img src="https://www.svgrepo.com/show/513273/book-opened.svg" width="3%" /> POO
-
-> Esta lista de exercícios é parte da disciplina de Programação Orientada a Objetos (POO) em Java, ministrada pelo professor Cristovão Cunha no curso de Análise e Desenvolvimento de Sistemas na FATEC Guaratinguetá. Os exercícios abordam os conceitos básicos de POO, como classes, objetos, atributos, métodos, construtores, encapsulamento, herança, polimorfismo e interfaces.
-
 <br/>
 <p align="center">
   <h1 align="center">
@@ -28,8 +22,8 @@
 
 ## Conteúdo
 
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
+* [Sobre o projeto](#sobre-o-projeto)
+* [Linguagem](#linguagem)
 * [License](#license)
 
 ## Sobre o projeto

@@ -151,3 +151,40 @@ método da fatoração em números primos.
 |1 <br>23 |23 |23 &#124; 23 [√]<br>1 &#124; <br>  1 * 23 = 23|
 |0 |- |- |
 |-7 |Erro! Valor inválido |- |
+---
+
+<br>
+<br>
+
+<p align="center">
+
+  <h1 align="center"> Números primos </h1>
+  
+ Mínimo múltiplo comum, representado por MMC, é uma operação para encontrar o menor 
+número positivo, excluindo o zero, que é múltiplo comum entre todos os números dados. <br>
+Para calcular o MMC entre os números dados devemos fazer o seguinte: decompor em fatores 
+primos ou fazer uma decomposição simultânea.
+</p>
+
+### Exemplo
+
+Calcular o mínimo múltiplo comum para os números 4, 6 e 12.
+> 4 = 2², dois é um número primo <br>
+> 6 = 2 x 3, três também é primo <br>
+> 12 = 2² x 3 <br>
+Assim, o MMC de 4, 6 e 12 é o produto entre 2² x 3 = 4 x 3 = 12.
+
+<br>
+<br>
+
+### Exercício 7
+
+> Crie um programa que solicite ao usuário dois números inteiros. Através de um método que receba esses dois números inteiros como parâmetro de entrada, calcule e retorne o MMC (Mínimo últiplo Comum) destes números fornecidos. Utilize decomposição simultânea ou fatoração simultânea.
+
+| Entrada | Saída | Cálculo |
+|:------:|:-----------:|:-----------:|
+| Entre com um valor | MMC | Fórmula utilizada |
+| 10 <br> 20 | 20 | 10, 20 &#124; 2 <br> 5, 10 &#124; 2 <br> 5, 5 &#124; 5 <br> 1, 1 &#124; 2 * 2 * 5 = 20 |
+| 162 <br> 90 | 810 | 162, 90 &#124; 2 <br> 81, 45 &#124; 3 <br> 27, 15 &#124; 3 <br>9,5 &#124; 3 <br>3 ,5 &#124; 3 <br>1 ,5 &#124; 5 <br>1 ,1 &#124; <br> 2 *3 *3 *3 *3 *5 = 810|
+|23 <br>21 |483 |23 ,21 &#124;  <br>23 ,7 &#124;  <br>23 ,1 &#124; 3 <br>1 ,1 &#124; <br> 3 *7 *23 = 483|
+---

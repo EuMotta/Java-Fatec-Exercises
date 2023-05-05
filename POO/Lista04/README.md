@@ -258,7 +258,7 @@ hexagonal. Temos os seguintes números na sequência de números perfeitos: 6, 2
 | Entre com a quantidade de termos: 0 | Erro! Valor inválido |
 ---
 
-### Exercício 13
+### Exercício 14
 
 > Crie um programa que solicite ao usuário um número inteiro. Através de um método que receba esse número inteiro como parâmetro de entrada, inverta dígito-a-dígito e retorne um valor inteiro com o número invertido.
 

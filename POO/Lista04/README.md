@@ -93,3 +93,47 @@ do que 1000. São eles: <br>
 |2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991 e 997|
 
 ---
+
+### Exercício 6
+
+>  Crie um programa que solicite ao usuário dois números inteiros. Estes, devem ser passados como parâmetros de entrada para um método que irá gerar todos os números primos existentes no intervalo fechado desses dois valores e retornar uma array com a resposta. O programa principal ficará com a responsabilidade de imprimir o array de primos retornado pelo método. O método deve aceitar e entender como sendo a mesma coisa passar, por exemplo, os valores 1 e 100 ou 100 e 1.
+
+| Entrada | Saída | 
+|:------:|:-----------:|
+| Entre os valores | Resultado |
+| 10 ; 50 |  11 13 17 19 23 29 31 37 41 43 47  | 
+| 231 ; 205 | 211 223 227 229  |
+| 19 ; 19 | 19  |
+---
+
+<p align="center">
+
+  <h1 align="center"> Como se calcula o MDC?  </h1>
+  
+Uma das maneiras de calcular o MDC entre dois ou mais números inteiros é realizando a listagem dos divisores de cada número envolvido e verificando qual é o maior deles que aparece igualmente nas listas em questão.
+<br> 
+ Neste exemplo sabemos que o resultado é 10. Chegaremos a esse resultado utilizando o 
+método da fatoração em números primos.
+<br>
+
+| Entrada | Divisão | 
+|:------:|:-----------:|
+| 20 ; 10 | 2  |
+| 10 ; 5 | 2  |
+| 5 ; 5 | 5  |
+| 1 ; 1 | |
+</p>
+<br>
+<br>
+
+### Exercício 6
+
+>   Crie um programa que solicite ao usuário dois números inteiros. Através de um método que receba esses dois números inteiros como parâmetro de entrada, calcule e retorne o MDC (Máximo Divisor Comum) destes números fornecidos. 
+
+| Entrada | Saída | Cálculo |
+|:------:|:-----------:|:-----------:|
+| Entre com um valor | MDC | Fórmula utilizada |
+| 10 <br> 20 | 10 | 10, 20 &#124; 2 [√] <br> 5, 10 &#124; 2 [x] <br> 5, 5 &#124; 5 [√] <br> 1, 1 &#124; <br> 1 * 2 * 5 = 10 |
+| 162 <br> 90 | 18 | 162, 90 &#124; 2 [√] <br> 81, 45 &#124; 3 [√] <br> 27, 15 &#124; 3 [√] <br> 9, 5 &#124; 3 [x] <br> 3, 5 &#124; 3 [x] <br> 1, 5 &#124; 5 [x] <br> 1, 1 &#124; <br>  1 * 2 * 3 * 3 = 18 |
+|23 <br>21 |1 |23,21 &#124;3 [x]<br>23,7 &#124;7 [x]<br>23,1 &#124;23 [x]<br>1,1 &#124; <br> 1 =1|
+---

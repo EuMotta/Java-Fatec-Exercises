@@ -68,7 +68,7 @@
 
 
 ### Exercício 9
-> Crie um arquivo chamado `Fatec.java`. Implemente um programa que mostre a seguinte saída. Compile e execute esse programa.
+> Crie um arquivo chamado `Fatec.java`. Implemente um programa que mostre a seguinte saída. Compile e execute esse programa.  
 <pre>
 #####  ###  #####  #####  ###
 #     #   #   #    #     #   #
@@ -80,7 +80,7 @@
 ---
 
 ### Exercício 10
-Qual alternativa possui apenas nomes válidos para arquivos de código fonte Java?
+> Qual alternativa possui apenas nomes válidos para arquivos de código fonte Java?  
 a. Fatec.java e Treinamentos.java.
 b. fatec.java e Treinamentos.Java.
 c. Fatec.JAVA e Treinamentos.java.
@@ -90,7 +90,7 @@ e. Fatec.Java e Treinamentos.Java.
 ---
 
 ### Exercício 11
-Qual é o comando utilizado para executar o compilador da linguagem Java?
+> Qual é o comando utilizado para executar o compilador da linguagem Java?  
 a. JavaC  
 b. javac  
 c. java-compiler  
@@ -100,7 +100,7 @@ e. jc
 ---
 
 ### Exercício 12
-Qual é o comando utilizado para executar um programa Java?
+> Qual é o comando utilizado para executar um programa Java?  
 a. java  
 b. JAVA  
 c. java  
@@ -110,7 +110,7 @@ e. jvm
 ---
 
 ### Exercício 13
-Qual é a extensão dos arquivos que armazenam código compilado de um programa Java?
+> Qual é a extensão dos arquivos que armazenam código compilado de um programa Java?  
 a. .java  
 b. .class  
 c. .exe  
@@ -120,7 +120,7 @@ e. .sh
 ---
 
 ### Exercício 14
-Ao compilar o arquivo `Programa.java`, quantos arquivos com a extensão `.class` serão gerados?
+> Ao compilar o arquivo `Programa.java`, quantos arquivos com a extensão `.class` serão gerados?  
 
 ```
 class Maria {
@@ -140,11 +140,78 @@ class Jonas {
         System.out.println("Jonas");
     }
 }
-```
-a. Nenhum  
+```  
+> a. Nenhum  
 b. Um  
 c. Dois  
 d. Três  
 e. Quatro  
+
+---
+
+### Exercício 15
+> Para verificar a versão do compilador Java ou do ambiente de execução Java, qual opção podemos utilizar ao executar os comandos `javac` ou `java`?  
+a. -version  
+b. -v  
+c. -ver  
+d. -versao  
+
+---
+
+### Exercício 16
+> Qual alternativa declara corretamente o método `main`?  
+a. public static main(String[] args)  
+b. public static void Main(String[] args)  
+c. void main(String[] args)  
+d. static void Main()  
+e. public static void main(String[] args)  
+
+---
+
+### Exercício 17
+> Qual código pode ser utilizado para exibir a mensagem Fatec em Java?  
+a. system.out.println("Fatec")  
+b. System.out.println("Fatec")  
+c. System.Console.WriteLine("Fatec")  
+d. system.console.writeLine("Fatec")  
+e. print("Fatec")  
+
+---
+
+### Exercício 18
+> Qual sequência de escape indica uma "quebra de linha"?  
+a. \n  
+b. \r  
+c. \f  
+d. \t  
+e. \b 
+
+---
+
+### Exercício 19
+> Quais são os marcadores utilizados para inserir comentários nos programas em Java?  
+a. // e %  
+b. #, //, /* e */  
+c. //, /* e */  
+d.<!- - e - ->  
+e.% e #  
+
+---
+
+### Exercício 20
+> Considere o seguinte programa em Java.
+<pre>
+public class Argumentos {publicstaticvoidmain(String[] args) {
+    System.out.println(args[0]);
+    System.out.println(args[1]);
+    }
+}
+</pre>  
+> O que seria exibido na saída padrão se a classe Argumentos fosse executada com o seguinte comando?  
+a.java e Argumentos  
+b.Argumentos e Fatec  
+c.Fatec e Livros   
+d.java e Fatec  
+e.Argumentos e Livros  
 
 ---

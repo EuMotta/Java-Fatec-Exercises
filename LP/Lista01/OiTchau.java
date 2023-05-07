@@ -1,4 +1,3 @@
-//José Antonio Motta
 import java.util.Scanner;
 public class OiTchau {
     public static void main(String[] args) {
@@ -15,5 +14,6 @@ public class OiTchau {
                 System.out.println("Tchau");
             }
         }
+        num.close();
     }
 }

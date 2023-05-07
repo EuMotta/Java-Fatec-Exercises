@@ -1,4 +1,4 @@
-public class Ex23 {
+public class ex23 {
 
     public static void main(String[] args) {
         int n = (int) (Math.random() * 10 + 1);

@@ -1,4 +1,4 @@
-public class Ex16 {
+public class ex16 {
 
     public static void main(String[] args) {
         int quantidadeTermos = 0;

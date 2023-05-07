@@ -1,4 +1,4 @@
-public class Ex13 {
+public class ex13 {
 
     public static void main(String[] args) {
         int m = (int) (Math.random() * 10 + 1), n = (int) (Math.random() * 10 + 1);

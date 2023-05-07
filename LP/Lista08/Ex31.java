@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Ex31 {
+public class ex31 {
 
     public static void main(String[] args) {
         int n = 0;

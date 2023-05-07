@@ -1,4 +1,4 @@
-public class Ex29 {
+public class ex29 {
 
     public static void main(String[] args) {
         int n = 10;

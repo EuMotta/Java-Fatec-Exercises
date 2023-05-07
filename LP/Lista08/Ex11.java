@@ -1,4 +1,4 @@
-public class Ex11 {
+public class ex11 {
 
     public static void main(String[] args) {
         int n = 5;

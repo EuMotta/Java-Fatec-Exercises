@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Ex32 {
+public class ex32 {
 
     public static void main(String[] args) {
         System.out.print("Digite uma frase: ");

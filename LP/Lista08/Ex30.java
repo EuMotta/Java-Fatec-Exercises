@@ -1,4 +1,4 @@
-public class Ex30 {
+public class ex30 {
 
     public static void main(String[] args) {
         double[] notas = new double[5];

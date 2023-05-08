@@ -45,7 +45,7 @@ public class ConversaoPrimitivos {
 ---
 
 ### Exercício 4
-> Crie um arquivo chamado `OperadoresAritmeticos.java`. Complete o código a seguir no local indicado por “xxxxx”, com os operadores aritméticos da linguagem Java. Não utilize operadores repetidos. O programa deve exibir os números 11, 8, 60, 5 e 2 nessa ordem.
+> Crie um arquivo chamado `OperadoresAritmeticos.java`. Complete o código a seguir no local indicado por `xxxxx`, com os operadores aritméticos da linguagem Java. Não utilize operadores repetidos. O programa deve exibir os números 11, 8, 60, 5 e 2 nessa ordem.
 
 ```java
 public class OperadoresAritmeticos {
@@ -90,7 +90,7 @@ public class TiposDeResultado {
 ---
 
 ### Exercício 6
-> Crie um arquivo chamado `DivisaoInteiraReal.java`. Complete o código, substituindo a seqüência “xxxxx” com operações de divisão, operações de casting e parênteses. O programa deve exibir os números 2, 2.5, 2.5, 2.5 e 2.0 nessa ordem. A cada linha complete o código de uma forma diferente. Não é necessário completar todas as seqüências.
+> Crie um arquivo chamado `DivisaoInteiraReal.java`. Complete o código, substituindo a seqüência `xxxxx` com operações de divisão, operações de casting e parênteses. O programa deve exibir os números 2, 2.5, 2.5, 2.5 e 2.0 nessa ordem. A cada linha complete o código de uma forma diferente. Não é necessário completar todas as seqüências.
 
 ```java
 public class DivisaoInteiraReal {
@@ -109,7 +109,7 @@ public class DivisaoInteiraReal {
 ---
 
 ### Exercício 7
-> Crie um arquivo chamado `OverflowUnderflow.java`. Complete o código, substituindo a seqüência “xxxxx” com valores literais. O programa deve exibir os números -2147483648 e 2147483647 nessa ordem.
+> Crie um arquivo chamado `OverflowUnderflow.java`. Complete o código, substituindo a seqüência `xxxxx` com valores literais. O programa deve exibir os números -2147483648 e 2147483647 nessa ordem.
 
 ```java
 public class OverflowUnderflow {
@@ -137,7 +137,7 @@ public class Concatenacao {
 ---
 
 ### Exercício 9
-> Crie um arquivo chamado `OperadoresDeAtribuicao.java`. Complete o código, substituindo a seqüência “xxxxx” com operações de atribuição. O programa deve exibir os valores 1, 3, 2, 6, 3, 1, 2 e 1 nessa ordem. Não utilize o mesmo operador duas ou mais vezes.
+> Crie um arquivo chamado `OperadoresDeAtribuicao.java`. Complete o código, substituindo a seqüência `xxxxx` com operações de atribuição. O programa deve exibir os valores 1, 3, 2, 6, 3, 1, 2 e 1 nessa ordem. Não utilize o mesmo operador duas ou mais vezes.
 
 ```java
 public class OperadoresDeAtribuicao {
@@ -169,3 +169,98 @@ public class OperadoresDeAtribuicao {
 }
 ```
 ---
+
+### Exercício 10
+> Crie um arquivo chamado `OperadoresRelacionais.java`. Complete o código, substituindo a seqüência `xxxxx` com operações de comparação. O programa deve exibir os valores `false`, `false`, `true`, `true`, `false` e `true` nessa ordem. Não utilize o mesmo operador duas ou mais vezes.
+
+```java
+public class OperadoresRelacionais {
+    public static void main(String[] args) {
+        int a = 1;
+        int b = 2;
+
+        System.out.println(a xxxxx b);
+        System.out.println(a xxxxx b);
+        System.out.println(a xxxxx b);
+        System.out.println(a xxxxx b);
+        System.out.println(a xxxxx b);
+        System.out.println(a xxxxx b);
+    }
+}
+```
+
+---
+
+### Exercício 11
+> Crie um arquivo chamado `OperadoresLogicos.java`. Complete o código, substituindo a seqüência `xxxxx` com operações lógicas. O programa deve exibir os valores `true`, `true`, `false`, `false` e `true` nessa ordem. Não utilize o mesmo operador duas ou mais vezes.
+
+```java
+public class OperadoresLogicos {
+    public static void main(String[] args) {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+
+        System.out.println(a > b xxxxx c < d);
+        System.out.println(a > b xxxxx c < d);
+        System.out.println(a > b xxxxx c < d);
+        System.out.println(a > b xxxxx c < d);
+        System.out.println(a > b xxxxx c < d);
+    }
+}
+```
+
+---
+
+### Exercício 12
+> Crie um arquivo chamado `OperadorTernario.java`. Complete o código, substituindo a seqüência `xxxxx` com o operador ternário. O programa deve exibir a mensagem `a < b` quando o valor da variável `a` for menor do que o valor da variável `b` e `a >= b` caso contrário.
+
+```java
+public class OperadorTernario {
+    public static void main(String[] args) {
+        int a = (int)(Math.random() * 100);
+        int b = (int)(Math.random() * 100);
+
+        System.out.println(a < b xxxxx );
+    }
+}
+```
+
+---
+
+### Exercício 13
+> Crie um arquivo chamado `OperadorNegacao.java`. Complete o código, substituindo a seqüência `xxxxx` com o operador de negação e parênteses. O programa deve exibir os valores `true` e `false` nessa ordem. Não é necessário preencher todas as seqüências.
+
+```java
+class OperadorNegacao {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+
+        System.out.println(xxxxx a < b xxxxx );
+        System.out.println(xxxxx a < b xxxxx );
+    }
+}
+```
+
+---
+
+### Exercício 14
+> Crie um arquivo chamado `PrePosIncrementoDecremento.java`. Complete o código, substituindo a seqüência `xxxxx` com os operadores de incremento e decremento. O programa deve exibir os valores 1, 3, 3 e 1 nessa ordem. Não é necessário preencher todas as seqüências.
+
+```java
+class PrePosIncrementoDecremento {
+    public static void main(String[] args) {
+        int a = 1;
+
+        System.out.println( xxxxx a xxxxx );
+        System.out.println( xxxxx a xxxxx );
+        System.out.println( xxxxx a xxxxx );
+        System.out.println( xxxxx a xxxxx );
+    }
+}
+```
+
+---
+

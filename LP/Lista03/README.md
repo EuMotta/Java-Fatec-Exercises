@@ -106,4 +106,66 @@ public class DivisaoInteiraReal {
     }
 }
 ```
+---
 
+### Exercício 7
+> Crie um arquivo chamado `OverflowUnderflow.java`. Complete o código, substituindo a seqüência “xxxxx” com valores literais. O programa deve exibir os números -2147483648 e 2147483647 nessa ordem.
+
+```java
+public class OverflowUnderflow {
+    public static void main(String[] args) {
+        System.out.println( xxxxx + 1);
+        System.out.println( xxxxx - 1);
+    }
+}
+```
+---
+
+### Exercício 8
+> Crie um arquivo chamado `Concatenacao.java`. Complete o código, substituindo a seqüência `xxxxx` com operações de concatenação e parênteses. O programa deve exibir as mensagens "Java123", "Java6", "123Java" e "6Java" nessa ordem. Não é necessário completar todas as seqüências.
+
+```java
+public class Concatenacao {
+    public static void main(String[] args) {
+        System.out.println( xxxxx "Java" xxxxx 1 xxxxx 2 xxxxx 3 xxxxx );
+        System.out.println( xxxxx "Java" xxxxx 1 xxxxx 2 xxxxx 3 xxxxx );
+        System.out.println( xxxxx 1 xxxxx 2 xxxxx 3 xxxxx "Java" xxxxx );
+        System.out.println( xxxxx 1 xxxxx 2 xxxxx 3 xxxxx "Java" xxxxx );
+    }
+}
+```
+---
+
+### Exercício 9
+> Crie um arquivo chamado `OperadoresDeAtribuicao.java`. Complete o código, substituindo a seqüência “xxxxx” com operações de atribuição. O programa deve exibir os valores 1, 3, 2, 6, 3, 1, 2 e 1 nessa ordem. Não utilize o mesmo operador duas ou mais vezes.
+
+```java
+public class OperadoresDeAtribuicao {
+    public static void main(String[] args) {
+        int a xxxxx1;
+        System.out.println(a);
+
+        a xxxxx 2;
+        System.out.println(a);
+
+        a xxxxx 1;
+        System.out.println(a);
+
+        a xxxxx 3;
+        System.out.println(a);
+
+        a xxxxx 2;
+        System.out.println(a);
+
+        a xxxxx 2;
+        System.out.println(a);
+
+        a xxxxx;
+        System.out.println(a);
+
+        a xxxxx;
+        System.out.println(a);
+    }
+}
+```
+---

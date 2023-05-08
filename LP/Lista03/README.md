@@ -1,7 +1,7 @@
 <p align="center">
 
   <img src="https://www.svgrepo.com/show/452234/java.svg" alt="Matriz Logo" width="200px" height="50px" align="right">
-  <h1 align="left"> Introdução LP </h1>
+  <h1 align="left"> Operadores LP </h1>
 
 </p>
 

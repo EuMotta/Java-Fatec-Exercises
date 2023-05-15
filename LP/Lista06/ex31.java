@@ -24,10 +24,13 @@ public class ex31 {
 					aux++;
 					
 				}
-				
+				if(aux > termos){
+					System.exit(0);
+					
+				}
 			}
 			
-		}while(termos != 0);
+		}while(termos != 0 );
 		scan.close();	
 		
 	}

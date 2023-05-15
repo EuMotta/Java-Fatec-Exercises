@@ -33,6 +33,7 @@ public class Index {
 
       opcao = num.nextInt();
       switch (opcao) {
+        /* Alterar estado da porta Start */
         case 1:
           System.out.print("INSIRA O NUMERO DA CASA: ");
           int numCasa = num.nextInt();
@@ -53,7 +54,9 @@ public class Index {
           System.out.print("DESEJA MODIFICAR OUTRA PORTA? (0 - NAO, 1 - SIM): ");
           opcao = num.nextInt();
           break;
+        /* Alterar estado da porta End */
 
+        /* Visualizar portas Start */
         case 2:
           System.out.println("|--------------------------|");
           for (int i = 0; i < condominio.getCasa().length; i++) {
@@ -65,11 +68,15 @@ public class Index {
           }
           System.out.println("|--------------------------|");
           break;
+        /* Visualizar portas End */
 
+        /* Abrir todas as portas Start */
         case 3:
-          System.out.println("DESEJA ABRIR OU FECHAR TODAS AS PORTAS? (0 - ABRIR, 1 - FECHAR)");
+          System.out.println("DESEJA ABRIR OU FECHAR TODAS AS PORTAS? (0 - ABRIR, 1 - FECHAR, 2 - ESCOLHER CASA)");
           int abrirFechar = num.nextInt();
+
           switch (abrirFechar) {
+            /* Abrir */
             case 0:
               for (int i = 0; i < condominio.getCasa().length; i++) {
                 for (int j = 0; j < condominio.getCasa()[i].length; j++) {
@@ -77,6 +84,7 @@ public class Index {
                 }
               }
               break;
+            /* Fechar */
             case 1:
               for (int i = 0; i < condominio.getCasa().length; i++) {
                 for (int j = 0; j < condominio.getCasa()[i].length; j++) {
@@ -84,10 +92,36 @@ public class Index {
                 }
               }
               break;
+            /* Escolher */
+            case 2:
+              System.out.print("INSIRA O NÚMERO DA CASA: ");
+              int numeroCasa = num.nextInt();
+              System.out.println("DESEJA ABRIR OU FECHAR? ( 0 - ABRIR, 1 - FECHAR )");
+              int abrirFecharCasa = num.nextInt();
+              switch (abrirFecharCasa) {
+                case 0:
+                  for (int j = 0; j < condominio.getCasa()[numeroCasa - 1].length; j++) {
+                    condominio.setEstadoPorta(numeroCasa, j + 1, true);
+                  }
+                  break;
+                case 1:
+                  for (int j = 0; j < condominio.getCasa()[numeroCasa - 1].length; j++) {
+                    condominio.setEstadoPorta(numeroCasa, j + 1, false);
+                  }
+                  break;
+
+                default:
+                  break;
+              }
+
+              break;
             default:
               break;
           }
+          /* Abrir todas as portas End */
 
+
+          /* Visualizar cores Start */       
         case 4:
           System.out.println("|--------------|");
           for (int i = 0; i < condominio.getCasa().length; i++) {
@@ -97,7 +131,9 @@ public class Index {
           System.out.println("|--------------|");
           System.out.println();
           break;
+          /* Visualizar cores End */  
 
+          /* Editar cores Start */  
         case 5:
           System.out.print("INSIRA O NUMERO DA CASA: ");
           numCasa = num.nextInt();
@@ -105,7 +141,9 @@ public class Index {
           String novaCor = num.next();
           condominio.setCorCasa(numCasa, novaCor);
           break;
+          /* Editar cores End */  
 
+          /* Trancar porta Start */ 
         case 6:
           System.out.print("INSIRA O NUMERO DA CASA: ");
           numCasa = num.nextInt();
@@ -125,8 +163,10 @@ public class Index {
           }
           System.out.println("|--------------------------|");
           break;
+        /* Trancar porta End */ 
 
-          case 7:
+        /* Trancar Todas as portas Start */ 
+        case 7:
           System.out.println("DESEJA TRANCAR OU DESTRANCAR TODAS AS PORTAS? (0 - TRANCAR, 1 - DESTRANCAR)");
           int trancarDestrancar = num.nextInt();
           switch (trancarDestrancar) {
@@ -147,7 +187,10 @@ public class Index {
             default:
               break;
           }
-          case 8: 
+          /* Trancar Todas as portas End */ 
+
+          /* Visualizar tranca de Todas as portas Start */ 
+        case 8:
           System.out.println("|--------------------------|");
           for (int i = 0; i < condominio.getCasa().length; i++) {
             for (int j = 0; j < condominio.getCasa()[i].length; j++) {
@@ -159,6 +202,7 @@ public class Index {
           System.out.println("|--------------------------|");
         default:
           break;
+        /* Visualizar tranca de Todas as portas End */ 
       }
     } while (opcao != 9);
   }

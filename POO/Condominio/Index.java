@@ -29,7 +29,7 @@ public class Index {
       System.out.printf("%2d - TRANCAR PORTA%n", 6);
       System.out.printf("%2d - ALTERAR TRANCA DE TODAS AS PORTAS%n", 7);
       System.out.printf("%2d - VISUALIZAR ESTADO DA TRANCA DE TODAS AS PORTAS%n", 8);
-      System.out.printf("%2d - SAIR%n", 8);
+      System.out.printf("%2d - SAIR%n", 9);
 
       opcao = num.nextInt();
       switch (opcao) {
@@ -148,6 +148,7 @@ public class Index {
               break;
           }
           case 8: 
+          System.out.println("|--------------------------|");
           for (int i = 0; i < condominio.getCasa().length; i++) {
             for (int j = 0; j < condominio.getCasa()[i].length; j++) {
               System.out.println(
@@ -155,6 +156,7 @@ public class Index {
                       + (condominio.getCasa()[i][j][0][1] ? "Trancada |" : "Destrancada |"));
             }
           }
+          System.out.println("|--------------------------|");
         default:
           break;
       }

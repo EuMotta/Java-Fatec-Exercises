@@ -3,6 +3,11 @@ import java.util.Scanner;
 public class Index {
   public static void main(String[] args) {
     Scanner num = new Scanner(System.in);
+    System.out.println("+--------------------------+");
+    System.out.println("|                          |");
+    System.out.println("|    CRIE SEU CONDOMINIO   |");
+    System.out.println("|                          |");
+    System.out.println("+--------------------------+");
 
     System.out.print("INSIRA O NUMERO DE CASAS: ");
     int numCasas = num.nextInt();
@@ -120,8 +125,7 @@ public class Index {
           }
           /* Abrir todas as portas End */
 
-
-          /* Visualizar cores Start */       
+          /* Visualizar cores Start */
         case 4:
           System.out.println("|--------------|");
           for (int i = 0; i < condominio.getCasa().length; i++) {
@@ -131,9 +135,9 @@ public class Index {
           System.out.println("|--------------|");
           System.out.println();
           break;
-          /* Visualizar cores End */  
+        /* Visualizar cores End */
 
-          /* Editar cores Start */  
+        /* Editar cores Start */
         case 5:
           System.out.print("INSIRA O NUMERO DA CASA: ");
           numCasa = num.nextInt();
@@ -141,9 +145,9 @@ public class Index {
           String novaCor = num.next();
           condominio.setCorCasa(numCasa, novaCor);
           break;
-          /* Editar cores End */  
+        /* Editar cores End */
 
-          /* Trancar porta Start */ 
+        /* Trancar porta Start */
         case 6:
           System.out.print("INSIRA O NUMERO DA CASA: ");
           numCasa = num.nextInt();
@@ -163,9 +167,9 @@ public class Index {
           }
           System.out.println("|--------------------------|");
           break;
-        /* Trancar porta End */ 
+        /* Trancar porta End */
 
-        /* Trancar Todas as portas Start */ 
+        /* Trancar Todas as portas Start */
         case 7:
           System.out.println("DESEJA TRANCAR OU DESTRANCAR TODAS AS PORTAS? (0 - TRANCAR, 1 - DESTRANCAR)");
           int trancarDestrancar = num.nextInt();
@@ -187,9 +191,9 @@ public class Index {
             default:
               break;
           }
-          /* Trancar Todas as portas End */ 
+          /* Trancar Todas as portas End */
 
-          /* Visualizar tranca de Todas as portas Start */ 
+          /* Visualizar tranca de Todas as portas Start */
         case 8:
           System.out.println("|--------------------------|");
           for (int i = 0; i < condominio.getCasa().length; i++) {
@@ -202,8 +206,37 @@ public class Index {
           System.out.println("|--------------------------|");
         default:
           break;
-        /* Visualizar tranca de Todas as portas End */ 
+        /* Visualizar tranca de Todas as portas End */
+
+        case 9:
+          System.out.println("|--------------------------|");
+          System.out.println("|  SISTEMA DE EMERGENCIA!  |");
+          System.out.println("|  0 - ACIONAR   1 - SAIR  |");
+          int emergencia = num.nextInt();
+          switch (emergencia) {
+            case 0:
+            System.out.println("|----------------------------------------|");
+            System.out.println("|     SISTEMA DE EMERGENCIA ACIONADO!    |");
+            System.out.println("|  TODAS AS PORTAS FECHADAS E TRANCADAS  |");
+            System.out.println("|----------------------------------------|");
+              for (int i = 0; i < condominio.getCasa().length; i++) {
+                for (int j = 0; j < condominio.getCasa()[i].length; j++) {
+                  condominio.setEstadoPorta(i + 1, j + 1, false);
+                }
+              }
+              for (int i = 0; i < condominio.getCasa().length; i++) {
+                for (int j = 0; j < condominio.getCasa()[i].length; j++) {
+                  condominio.setTrancarPorta(i + 1, j + 1, true);
+                }
+              }
+
+              break;
+
+            default:
+              break;
+          }
+          break;
       }
-    } while (opcao != 9);
+    } while (opcao != 10);
   }
 }

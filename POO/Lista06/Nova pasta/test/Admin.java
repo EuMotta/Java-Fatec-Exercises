@@ -10,18 +10,11 @@ public class Admin {
     Scanner num = new Scanner(System.in);
     int opcao;
     do {
-      System.out.println("+--------------------------+");
-      System.out.println("|                          |");
-      System.out.println("|   Comércio de produtos   |");
-      System.out.println("|                          |");
-      System.out.println("+--------------------------+");
       System.out.println("O que deseja fazer? ");
       System.out.println("1 - Adicionar produto ");
       System.out.println("2 - Visualizar produtos ");
       System.out.println("3 - Deletar produto ");
       System.out.println("4 - Editar produto ");
-      System.out.println("4 - Carregar produtos ");
-      System.out.println("6 - Deletar todos os produtos ");
       opcao = num.nextInt();
       switch (opcao) {
         case 1:
@@ -39,8 +32,6 @@ public class Admin {
           case 5:
           product.loadProducts();
           break;
-          case 6:
-          product.deleteAllProducts();
         default:
           break;
       }

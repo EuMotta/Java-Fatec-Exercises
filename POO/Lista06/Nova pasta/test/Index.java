@@ -9,15 +9,12 @@ public class Index {
   public static void main(String[] args) {
     product.loadProducts(); // carregar os produtos para não sobreescrever
     Scanner leia = new Scanner(System.in);
-    System.out.println("+--------------------------+");
-    System.out.println("|     Escolha uma opção    |");
-    System.out.println("|                          |");
-    System.out.println("|     Admin    Usuario     |");
-    System.out.println("+--------------------------+");
-    System.out.print("Opção: ");
+    System.out.println("Escolha uma opção: ");
+    System.out.println("Admin");
+    System.out.println("Usuario");
     String opcao = leia.next();
 
-    do {
+    do {     
       if (opcao.equals("admin")) {
         Admin admin = new Admin();
         admin.showAdmin();

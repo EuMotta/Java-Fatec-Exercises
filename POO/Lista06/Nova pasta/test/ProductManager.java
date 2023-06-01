@@ -66,31 +66,32 @@ public class ProductManager {
   }
   /* Adicionar produtos End */
 
-  public void loadProducts() {
+
+public void loadProducts() {
     try {
-      File file = new File("products.txt");
-      Scanner scanner = new Scanner(file);
-      int i = 0;
-      while (scanner.hasNextLine()) {
-        String line = scanner.nextLine();
-        String[] parts = line.split(", ");
-        UUID id = UUID.fromString(parts[4].split(": ")[1]);
-        String name = parts[1].split(": ")[1];
-        String description = parts[2].split(": ")[1];
-        double price = Double.parseDouble(parts[3].split(": ")[1]);
-        Product product = new Product();
-        product.setId(id);
-        product.setName(name);
-        product.setDescription(description);
-        product.setPrice(price);
-        product.setNumber(++i);
-        listaDeProdutos.add(product);
-      }
-      scanner.close();
+        File file = new File("products.txt");
+        Scanner scanner = new Scanner(file);
+        int i = 0;
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] parts = line.split(", ");
+            UUID id = UUID.fromString(parts[4].split(": ")[1]);
+            String name = parts[1].split(": ")[1];
+            String description = parts[2].split(": ")[1];
+            double price = Double.parseDouble(parts[3].split(": ")[1]);
+            Product product = new Product();
+            product.setId(id);
+            product.setName(name);
+            product.setDescription(description);
+            product.setPrice(price);
+            product.setNumber(++i);
+            listaDeProdutos.add(product);
+        }
+        scanner.close();
     } catch (FileNotFoundException e) {
-      e.printStackTrace();
+        e.printStackTrace();
     }
-  }
+}
 
   /* Deletar produtos Start */
   public void deleteProduct() {
@@ -100,83 +101,49 @@ public class ProductManager {
     boolean found = false;
     UUID id = null;
     for (Product produto : listaDeProdutos) {
-      if (produto.getNumber() == number) {
-        found = true;
-        id = produto.getId();
-        break;
-      }
+        if (produto.getNumber() == number) {
+            found = true;
+            id = produto.getId();
+            break;
+        }
     }
 
     if (!found) {
-      System.out.println("Produto não encontrado.");
-      return;
+        System.out.println("Produto não encontrado.");
+        return;
     }
     for (Product produto : listaDeProdutos) {
-      if (produto.getNumber() == number) {
-        System.out.println("Nome: " + produto.getName());
-        System.out.println("Descrição: " + produto.getDescription());
-        System.out.println("Numero: " + produto.getNumber());
-        System.out.println("ID: " + produto.getId());
-        System.out.println("Preço: R$" + produto.getPrice());
-        System.out.println("-----------------------");
-      }
+        if (produto.getNumber() == number) {
+            System.out.println("Nome: " + produto.getName());
+            System.out.println("Descrição: " + produto.getDescription());
+            System.out.println("Numero: " + produto.getNumber());
+            System.out.println("ID: " + produto.getId());
+            System.out.println("Preço: " + produto.getPrice());
+            System.out.println("-----------------------");
+        }
     }
     while (true) {
-      System.out.println("Deseja realmente excluir o produto? (s/n)");
-      String delete = num.next().toLowerCase();
-      if (delete.charAt(0) == 's') {
-        for (int i = 0; i < listaDeProdutos.size(); i++) {
-          if (listaDeProdutos.get(i).getId().equals(id)) {
-            listaDeProdutos.remove(i);
-            System.out.println("Produto excluído com sucesso!");
-            saveProducts();
-            return;
-          }
-        }
-
-      } else if (delete.charAt(0) == 'n') {
-        return;
-      } else {
-        System.out.println("Atributo invalido.");
-      }
-      num.close();
-    }
-  }
-  /* Deletar produtos End */
-
-  public void deleteAllProducts() {
-    Scanner num = new Scanner(System.in);
-    System.out.println("Todos os produtos serão excluídos, tem certeza? (s/n)");
-    String delete = num.next().toLowerCase();
-
-    if (delete.charAt(0) == 's') {
-      listaDeProdutos.clear();
-      try {
-
-        System.out.println("Todos os produtos foram excluídos com sucesso!");
-        System.out.println("Deseja Resetar a numeração dos produtos?");
-        delete = num.next().toLowerCase();
+        System.out.println("Deseja realmente excluir o produto? (s/n)");
+        String delete = num.next().toLowerCase();
         if (delete.charAt(0) == 's') {
-          FileWriter writer = new FileWriter("counter.txt");
-          writer.write(""); // Limpar contador
-          writer.close();
+            for (int i = 0; i < listaDeProdutos.size(); i++) {
+                if (listaDeProdutos.get(i).getId().equals(id)) {
+                    listaDeProdutos.remove(i);
+                    System.out.println("Produto excluído com sucesso!");
+                    saveProducts();
+                    return;
+                }
+            }
+
         } else if (delete.charAt(0) == 'n') {
-          return;
+            return;
         } else {
-          System.out.println("Opção inválida.");
-          return;
+            System.out.println("Atributo invalido.");
         }
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-      saveProducts();
-    } else if (delete.charAt(0) == 'n') {
-      return;
-    } else {
-      System.out.println("Opção inválida.");
-      return;
+        num.close();
     }
-  }
+}
+  /* Deletar produtos End */
 
   /* Editar produtos Start */
   public void editProduct() {

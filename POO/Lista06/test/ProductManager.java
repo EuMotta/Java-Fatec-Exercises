@@ -144,6 +144,7 @@ public class ProductManager {
   }
   /* Deletar produtos End */
 
+ /* Deletar Todos os produtos Start */
   public void deleteAllProducts() {
     Scanner num = new Scanner(System.in);
     System.out.println("Todos os produtos serão excluídos, tem certeza? (s/n)");
@@ -177,6 +178,7 @@ public class ProductManager {
       return;
     }
   }
+ /* Deletar Todos os produtos End */
 
   /* Editar produtos Start */
   public void editProduct() {
@@ -261,6 +263,7 @@ public class ProductManager {
   }
 
   /* Mostrar produtos End */
+  
   public void showProductsFromFile() {
     try {
       File file = new File("products.txt");

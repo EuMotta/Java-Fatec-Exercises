@@ -23,7 +23,8 @@ public class Index {
         admin.showAdmin();
       } else if (opcao.equals("usuario")) {
         System.out.println("em construção");
-        System.out.println("--------------\n");
+        User user = new User();
+        user.showUser();
       } else {
         break;
       }

@@ -1,23 +1,24 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class User {
 
     UserManager userManager = new UserManager();
-
-    private void admin() {
+    List<UserData> userList = userManager.loadUsersFromFile();
+    private void user() {
         Scanner num = new Scanner(System.in);
         int opcao;
-        System.out.println("Deseja criar um usuário ou entrar em um existente?");
-        System.out.println("C - Criar");
-        System.out.println("E - Entrar");
+        System.out.println("Deseja editar o usuário existente? (s/n)");
         String escolher = num.next().toLowerCase();
-        if (escolher.charAt(0) == 'c') {
+        if (escolher.charAt(0) == 's') {
             userManager.createUser();
+        } else {
+            userManager.editUser(userList);
         }
         do {
             System.out.println("+--------------------------+");
             System.out.println("|                          |");
-            System.out.println("|   Comércio de produtos   |");
+            System.out.println("|     Canal do Usuário     |");
             System.out.println("|                          |");
             System.out.println("+--------------------------+");
             System.out.println("O que deseja fazer? ");
@@ -28,8 +29,8 @@ public class User {
         } while (opcao != 8);
     }
 
-    public void showAdmin() {
-        this.admin();
+    public void showUser() {
+        this.user();
     }
 
 }

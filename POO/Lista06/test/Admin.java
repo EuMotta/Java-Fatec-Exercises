@@ -18,8 +18,9 @@ public class Admin {
       System.out.println("2 - Visualizar produtos ");
       System.out.println("3 - Deletar produto ");
       System.out.println("4 - Editar produto ");
-      System.out.println("4 - Carregar produtos ");
+      System.out.println("5 - Carregar produtos ");
       System.out.println("6 - Deletar todos os produtos ");
+      System.out.print("Opção:  ");
       opcao = num.nextInt();
       switch (opcao) {
         case 1:

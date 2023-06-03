@@ -5,27 +5,37 @@ public class User {
 
     UserManager userManager = new UserManager();
     List<UserData> userList = userManager.loadUsersFromFile();
-    private void user() {
+
+    private String user() {
         Scanner num = new Scanner(System.in);
         int opcao;
-        System.out.println("Deseja criar, editar ou comprar com o usuário? (c/e/x)");
+        System.out.println("Escolha uma opção: ");
+        System.out.println("C - Criar");
+        System.out.println("E - Editar: ");
+        System.out.println("X - Comprar: ");
+        System.out.println("S - Sair: ");
         System.out.print("Opção: ");
         String escolher = num.next().toLowerCase();
-        if (escolher.charAt(0) == 's') {
+        if (escolher.charAt(0) == 'c') {
             userManager.createUser();
-        } if(escolher.charAt(0) == 'e') {
+        }
+        if (escolher.charAt(0) == 'e') {
             userManager.editUser(userList);
-        }if(escolher.charAt(0) == 'x') {
+        }
+        if (escolher.charAt(0) == 'x') {
             userManager.userShop(userList);
-        }else {
+        }
+        if (escolher.charAt(0) == 's') {
+            return "sair";
+        } else if(escolher.charAt(0) != 's' && escolher.charAt(0) != 'x' && escolher.charAt(0) != 'c' && escolher.charAt(0) != 's') {
             System.out.println("|---- Opção inválida, digite novamente. ----|");
             System.out.println();
-            return;
-        }
+            return "invalida";
+        }else return "invalida";
     }
 
-    public void showUser() {
-        this.user();
+    public String showUser() {
+        return this.user();
     }
 
 }

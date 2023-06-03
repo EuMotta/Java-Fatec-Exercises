@@ -11,9 +11,7 @@ public class Admin {
     int opcao;
     do {
       System.out.println("+--------------------------+");
-      System.out.println("|                          |");
       System.out.println("|   Comércio de produtos   |");
-      System.out.println("|                          |");
       System.out.println("+--------------------------+");
       System.out.println("O que deseja fazer? ");
       System.out.println("1 - Adicionar produto ");

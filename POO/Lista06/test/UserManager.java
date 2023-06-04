@@ -274,23 +274,55 @@ public class UserManager {
         System.out.println("+--------------------------+");
         System.out.println("|    Criação de usuário    |");
         System.out.println("+--------------------------+");
-        System.out.print("Informe o CPF: ");
-        String cpf = input.nextLine();
-        System.out.print("Informe o nome: ");
-        String name = input.nextLine();
-
-        System.out.print("Informe o sobrenome: ");
-        String lastName = input.nextLine();
-
-        System.out.print("Informe a idade: ");
-        int age = input.nextInt();
-
-        System.out.print("Informe a quantidade de dinheiro: ");
-        int money = input.nextInt();
-
+    
+        String cpf;
+        do {
+            System.out.print("Informe o CPF (de 6 até 12 dígitos): ");
+            cpf = input.nextLine();
+            if (cpf.length() > 12 || cpf.length() < 6) {
+                System.out.println("+----------- CPF Inválido! -----------+");
+            }
+        } while (cpf.length() > 12 || cpf.length() < 6);
+    
+        String name;
+        do {
+            System.out.print("Informe o Nome (de 2 a 19 dígitos): ");
+            name = input.nextLine();
+            if (name.length() > 19 || name.length() < 2) {
+                System.out.println("+----------- Nome Inválido! -----------+");
+            }
+        } while (name.length() > 19 || name.length() < 2);
+    
+        String lastName;
+        do {
+            System.out.print("Informe o Sobrenome (de 3 a 30 dígitos): ");
+            lastName = input.nextLine();
+            if (lastName.length() > 30 || lastName.length() < 3) {
+                System.out.println("+----------- Sobrenome Inválido! -----------+");
+            }
+        } while (lastName.length() > 30 || lastName.length() < 3);
+    
+        int age;
+        do {
+            System.out.print("Informe a idade ( Obrigatório +18 anos ): ");
+            age = input.nextInt();
+            if (age <= 18) {
+                System.out.println("+----------- Idade Inválida! -----------+");
+            }
+        } while (age <= 18);
+    
+        int money;
+        do {
+            System.out.print("Informe a quantidade de dinheiro: ");
+            money = input.nextInt();
+            if (money < 0) {
+                System.out.println("O valor do dinheiro deve ser positivo. Tente novamente.");
+            }
+        } while (money < 0);
+    
         input.nextLine();
         UserData user = new UserData(cpf, name, lastName, age, money, UUID.randomUUID());
-
+    
         try {
             FileWriter writer = new FileWriter("users.txt", true);
             writer.write(user.getCpf() + ", " + user.getName() + ", " + user.getLastName() + ", " + user.getAge()

@@ -16,6 +16,7 @@ public class User {
         System.out.println("S - Sair: ");
         System.out.print("Opção: ");
         String escolher = num.next().toLowerCase();
+        System.out.println("-----------------------\n");
         if (escolher.charAt(0) == 'c') {
             userManager.createUser();
         }

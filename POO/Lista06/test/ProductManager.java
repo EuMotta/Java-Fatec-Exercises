@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -22,62 +23,62 @@ public class ProductManager {
     Scanner num = new Scanner(System.in);
     int i = 0;
     try {
-        File file = new File("counter.txt");
-        if (file.exists()) {
-            Scanner scanner = new Scanner(file);
-            if (scanner.hasNextInt()) {
-                i = scanner.nextInt();
-            }
-            scanner.close();
+      File file = new File("counter.txt");
+      if (file.exists()) {
+        Scanner scanner = new Scanner(file);
+        if (scanner.hasNextInt()) {
+          i = scanner.nextInt();
         }
+        scanner.close();
+      }
     } catch (FileNotFoundException e) {
-        e.printStackTrace();
+      e.printStackTrace();
     }
     do {
-        System.out.println("Deseja adicionar um produto ao carrinho? (s/n)");
-        String resposta = num.next();
-        if (resposta.equalsIgnoreCase("s")) {
-            double price;
-            /* Tratamento para valor numérico */
-            while (true) {
-                System.out.println("Digite o preço do produto:");
-                String priceInput = num.next();
-                try {
-                    price = Double.parseDouble(priceInput);
-                    break;  
-                } catch (NumberFormatException e) {
-                    System.out.println("Preço inválido, insira o preço em valores numéricos.");
-                }
-            }
-            num.nextLine();
-            System.out.println("Digite o nome do produto:");
-            String name = num.nextLine();
-            
-            System.out.println("Digite a descrição do produto:");
-            String description = num.nextLine();
-
-            Product produto = new Product();
-            produto.setName(name);
-            produto.setDescription(description);
-            produto.setId(UUID.randomUUID());
-            produto.setPrice(price);
-            listaDeProdutos.add(produto);
-            produto.setNumber(++i);
-            System.out.println("Produto adicionado com sucesso!");
-        } else if (resposta.equalsIgnoreCase("n")) {
-            try {
-                FileWriter writer = new FileWriter("counter.txt");
-                writer.write(String.valueOf(i));
-                writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+      System.out.println("Deseja adicionar um produto ao carrinho? (s/n)");
+      String resposta = num.next();
+      if (resposta.equalsIgnoreCase("s")) {
+        double price;
+        /* Tratamento para valor numérico */
+        while (true) {
+          System.out.println("Digite o preço do produto:");
+          String priceInput = num.next();
+          try {
+            price = Double.parseDouble(priceInput);
             break;
+          } catch (NumberFormatException e) {
+            System.out.println("Preço inválido, insira o preço em valores numéricos.");
+          }
         }
+        num.nextLine();
+        System.out.println("Digite o nome do produto:");
+        String name = num.nextLine();
+
+        System.out.println("Digite a descrição do produto:");
+        String description = num.nextLine();
+
+        Product produto = new Product();
+        produto.setName(name);
+        produto.setDescription(description);
+        produto.setId(UUID.randomUUID());
+        produto.setPrice(price);
+        listaDeProdutos.add(produto);
+        produto.setNumber(++i);
+        System.out.println("Produto adicionado com sucesso!");
+      } else if (resposta.equalsIgnoreCase("n")) {
+        try {
+          FileWriter writer = new FileWriter("counter.txt");
+          writer.write(String.valueOf(i));
+          writer.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+        break;
+      }
     } while (true);
 
     saveProducts();
-}
+  }
 
   /* Adicionar produtos End */
 
@@ -113,13 +114,15 @@ public class ProductManager {
     System.out.println("Digite o numero do produto:");
     int number;
     while (true) {
-        try {
-            number = num.nextInt();
-            break; 
-        } catch (InputMismatchException e) {
-            System.out.println("Número inválido, insira um valor numérico.");
-            num.nextLine(); 
-        }
+      try {
+        number = num.nextInt();
+        break;
+      } catch (InputMismatchException e) {
+        System.out.println("Número inválido, insira um valor numérico.");
+        num.nextLine();
+      } catch (NoSuchElementException e) {
+        System.out.println("Número inválido, insira um valor positivo.");
+      }
     }
     boolean found = false;
     UUID id = null;
@@ -148,31 +151,31 @@ public class ProductManager {
     while (true) {
       System.out.println("Deseja realmente excluir o produto? (s/n)");
       try {
-          String delete = num.next().toLowerCase();
-          if (delete.charAt(0) == 's') {
-              for (int i = 0; i < listaDeProdutos.size(); i++) {
-                  if (listaDeProdutos.get(i).getId().equals(id)) {
-                      listaDeProdutos.remove(i);
-                      System.out.println("Produto excluído com sucesso!");
-                      saveProducts();
-                      return;
-                  }
-              }
-          } else if (delete.charAt(0) == 'n') {
+        String delete = num.next().toLowerCase();
+        if (delete.charAt(0) == 's') {
+          for (int i = 0; i < listaDeProdutos.size(); i++) {
+            if (listaDeProdutos.get(i).getId().equals(id)) {
+              listaDeProdutos.remove(i);
+              System.out.println("Produto excluído com sucesso!");
+              saveProducts();
               return;
-          } else {
-              throw new IllegalArgumentException(); 
+            }
           }
+        } else if (delete.charAt(0) == 'n') {
+          return;
+        } else {
+          throw new IllegalArgumentException();
+        }
       } catch (Exception e) {
-          System.out.println("Opção inválida.");
-          num.nextLine();  
+        System.out.println("Opção inválida.");
+        num.nextLine();
       }
-  }
-  
+    }
+
   }
   /* Deletar produtos End */
 
- /* Deletar Todos os produtos Start */
+  /* Deletar Todos os produtos Start */
   public void deleteAllProducts() {
     Scanner num = new Scanner(System.in);
     System.out.println("Todos os produtos serão excluídos, tem certeza? (s/n)");
@@ -206,7 +209,7 @@ public class ProductManager {
       return;
     }
   }
- /* Deletar Todos os produtos End */
+  /* Deletar Todos os produtos End */
 
   /* Editar produtos Start */
   public void editProduct() {
@@ -214,13 +217,13 @@ public class ProductManager {
     System.out.println("Digite o número do produto que deseja editar:");
     int number;
     while (true) {
-        try {
-            number = num.nextInt();
-            break; 
-        } catch (InputMismatchException e) {
-            System.out.println("Número inválido, insira um valor numérico.");
-            num.nextLine(); 
-        }
+      try {
+        number = num.nextInt();
+        break;
+      } catch (InputMismatchException e) {
+        System.out.println("Número inválido, insira um valor numérico.");
+        num.nextLine();
+      }
     }
 
     boolean found = false;
@@ -261,20 +264,20 @@ public class ProductManager {
               atributoValido = true;
               break;
 
-              case "preco":
+            case "preco":
               boolean precoValido = false;
               while (!precoValido) {
-                  try {
-                      System.out.println("Digite o novo preço:");
-                      double novoPreco = num.nextDouble();
-                      produto.setPrice(novoPreco);
-                      System.out.println("Produto atualizado com sucesso!");
-                      atributoValido = true;
-                      precoValido = true;
-                  } catch (InputMismatchException e) {
-                      System.out.println("Preço inválido. Por favor, digite um valor numérico.");
-                      num.nextLine();
-                  }
+                try {
+                  System.out.println("Digite o novo preço:");
+                  double novoPreco = num.nextDouble();
+                  produto.setPrice(novoPreco);
+                  System.out.println("Produto atualizado com sucesso!");
+                  atributoValido = true;
+                  precoValido = true;
+                } catch (InputMismatchException e) {
+                  System.out.println("Preço inválido. Por favor, digite um valor numérico.");
+                  num.nextLine();
+                }
               }
               break;
 
@@ -310,7 +313,7 @@ public class ProductManager {
   }
 
   /* Mostrar produtos End */
-  
+
   public void showProductsFromFile() {
     try {
       File file = new File("products.txt");

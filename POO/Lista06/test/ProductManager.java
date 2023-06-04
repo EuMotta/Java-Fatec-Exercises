@@ -35,13 +35,13 @@ public class ProductManager {
       e.printStackTrace();
     }
     do {
-      System.out.println("Deseja adicionar um produto ao carrinho? (s/n)");
+      System.out.print("Deseja adicionar um produto ao carrinho? (s/n): ");
       String resposta = num.next();
       if (resposta.equalsIgnoreCase("s")) {
         double price;
         /* Tratamento para valor numérico */
         while (true) {
-          System.out.println("Digite o preço do produto:");
+          System.out.print("Digite o preço do produto: ");
           String priceInput = num.next();
           try {
             price = Double.parseDouble(priceInput);
@@ -51,10 +51,10 @@ public class ProductManager {
           }
         }
         num.nextLine();
-        System.out.println("Digite o nome do produto:");
+        System.out.print("Digite o nome do produto: ");
         String name = num.nextLine();
 
-        System.out.println("Digite a descrição do produto:");
+        System.out.print("Digite a descrição do produto: ");
         String description = num.nextLine();
 
         Product produto = new Product();
@@ -64,7 +64,7 @@ public class ProductManager {
         produto.setPrice(price);
         listaDeProdutos.add(produto);
         produto.setNumber(++i);
-        System.out.println("Produto adicionado com sucesso!");
+        System.out.println("\nProduto adicionado com sucesso!\n");
       } else if (resposta.equalsIgnoreCase("n")) {
         try {
           FileWriter writer = new FileWriter("counter.txt");
@@ -111,17 +111,18 @@ public class ProductManager {
   /* Deletar produtos Start */
   public void deleteProduct() {
     Scanner num = new Scanner(System.in);
-    System.out.println("Digite o numero do produto:");
+    System.out.print("Digite o numero do produto: ");
     int number;
     while (true) {
       try {
         number = num.nextInt();
         break;
       } catch (InputMismatchException e) {
-        System.out.println("Número inválido, insira um valor numérico.");
+        System.out.print("Número inválido, insira um valor numérico: ");
         num.nextLine();
       } catch (NoSuchElementException e) {
-        System.out.println("Número inválido, insira um valor positivo.");
+        System.out.println("Número inválido, insira um valor positivo: ");
+        num.nextLine();
       }
     }
     boolean found = false;
@@ -135,7 +136,7 @@ public class ProductManager {
     }
 
     if (!found) {
-      System.out.println("Produto não encontrado.");
+      System.out.println("\nProduto não encontrado.\n");
       return;
     }
     for (Product produto : listaDeProdutos) {
@@ -149,7 +150,7 @@ public class ProductManager {
       }
     }
     while (true) {
-      System.out.println("Deseja realmente excluir o produto? (s/n)");
+      System.out.print("Deseja realmente excluir o produto? (s/n): ");
       try {
         String delete = num.next().toLowerCase();
         if (delete.charAt(0) == 's') {
@@ -237,7 +238,7 @@ public class ProductManager {
     }
 
     if (!found) {
-      System.out.println("Produto não encontrado.");
+      System.out.println("\nProduto não encontrado.\n");
       return;
     }
 
@@ -245,15 +246,25 @@ public class ProductManager {
       if (produto.getId().equals(id)) {
         boolean atributoValido = false;
         do {
-          System.out.println("Qual atributo você deseja editar? (nome/descrição/preço/sair)");
+          System.out.print("Qual atributo você deseja editar? (nome/descrição/preço/sair): ");
           String atributo = num.next();
           switch (atributo.toLowerCase()) {
 
             case "nome":
-              System.out.println("Digite o novo nome:");
-              num.nextLine();
-              produto.setName(num.nextLine());
-              System.out.println("Produto atualizado com sucesso!");
+              boolean nomeValido = false;
+              do {
+                System.out.println("\nDigite o novo nome:");
+                num.nextLine();
+                String novoNome = num.nextLine();
+                if (novoNome.length() >= 3 && novoNome.length() <= 20) {
+                  produto.setName(novoNome);
+                  System.out.println("Produto atualizado com sucesso!");
+                  nomeValido = true;
+                } else {
+                  System.out
+                      .println("O nome deve ter no mínimo 3 caracteres e no máximo 20 caracteres. Tente novamente.");
+                }
+              } while (!nomeValido);
               atributoValido = true;
               break;
 
@@ -301,14 +312,24 @@ public class ProductManager {
 
   /* Mostrar produtos Start */
   public void showProducts() {
-    System.out.println("Produtos registrados:");
-    for (Product produto : listaDeProdutos) {
-      System.out.println("Nome: " + produto.getName());
-      System.out.println("Descrição: " + produto.getDescription());
-      System.out.println("Numero: " + produto.getNumber());
-      System.out.println("ID: " + produto.getId());
-      System.out.println("Preço: " + produto.getPrice());
-      System.out.println("-----------------------");
+    if (listaDeProdutos.isEmpty()) {
+      System.out.println();
+      System.out.println("+---------------------------+");
+      System.out.println("Não há produtos registrados.");
+      System.out.println("+---------------------------+");
+      System.out.println();
+    } else {
+      System.out.println();
+      System.out.println("Produtos registrados:");
+      for (Product produto : listaDeProdutos) {
+        System.out.println("Nome: " + produto.getName());
+        System.out.println("Descrição: " + produto.getDescription());
+        System.out.println("Número: " + produto.getNumber());
+        System.out.println("ID: " + produto.getId());
+        System.out.println("Preço: " + produto.getPrice());
+        System.out.println("-----------------------");
+      }
+      System.out.println();
     }
   }
 

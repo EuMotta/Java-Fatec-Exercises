@@ -1,1 +1,0 @@
-Nome: novo nome produto, Descrição: produto para comprar, Preço: 2540.0, Numero: 2, ID: c1263e22-bde5-4699-9a32-5759ebd29804

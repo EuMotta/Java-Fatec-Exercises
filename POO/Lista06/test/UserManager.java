@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
@@ -41,6 +42,7 @@ public class UserManager {
             System.out.println("O que deseja fazer?");
             System.out.println("1 - Visualizar produtos ");
             System.out.println("2 - Comprar produtos ");
+            System.out.println("3 - Ver perfil ");
             System.out.print("Opção: ");
             int attribute = scanner.nextInt();
 
@@ -76,38 +78,40 @@ public class UserManager {
                     }
                     break;
 
-                case 2:
+                    case 2:
                     boolean productFound = false;
                     do {
                         System.out.print("Digite o número do produto que deseja comprar: ");
-                        int productNumber = scanner.nextInt();
-                        scanner.nextLine();
-
                         try {
+                            int productNumber = scanner.nextInt();
+                            scanner.nextLine();
+                
                             File file = new File("products.txt");
                             Scanner scan = new Scanner(file);
-
+                
                             while (scan.hasNextLine()) {
                                 String line = scan.nextLine();
                                 String[] parts = line.split(", ");
-
+                
                                 if (parts.length >= 5) {
                                     int numero = Integer.parseInt(parts[3].substring(8));
-
+                
                                     if (numero == productNumber) {
                                         String nome = parts[0].substring(6);
                                         double preco = Double.parseDouble(parts[2].substring(7));
-
+                
                                         if (userToUpdate.getMoney() >= preco) {
                                             userToUpdate.setMoney((int) (userToUpdate.getMoney() - preco));
+                                            System.out.println("+------------------------------+");
                                             System.out.println("Você comprou o produto: " + nome);
                                             System.out.println("Preço: " + preco);
                                             System.out.println("Dinheiro restante: " + userToUpdate.getMoney());
+                                            System.out.println("+------------------------------+");
                                             saveUsersToFile(userList);
                                         } else {
                                             System.out.println("Você não tem dinheiro suficiente.");
                                         }
-
+                
                                         productFound = true;
                                         break;
                                     }
@@ -115,17 +119,21 @@ public class UserManager {
                                     System.out.println("Erro ao ler o produto: " + line);
                                 }
                             }
-
+                
                             scan.close();
+                        } catch (InputMismatchException e) {
+                            System.out.println("Entrada inválida. Digite um número válido.");
+                            scanner.nextLine(); // Limpa o buffer do scanner
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
                         }
-
+                
                         if (!productFound) {
                             System.out.println("Produto não encontrado. Digite um número de produto válido.");
                         }
                     } while (!productFound);
                     break;
+                
 
                 case 3:
                     System.out.println("+----------------------------------------+");
@@ -335,7 +343,7 @@ public class UserManager {
         }
     }
 
-    public void showProducts(List<UserData> userList) {
+    public void showUsers(List<UserData> userList) {
         System.out.println("Usuários registrados:");
         for (UserData user : userList) {
             System.out.println("Nome: " + user.getName());

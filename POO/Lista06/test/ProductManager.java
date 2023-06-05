@@ -185,7 +185,6 @@ public class ProductManager {
     if (delete.charAt(0) == 's') {
       listaDeProdutos.clear();
       try {
-
         System.out.println("Todos os produtos foram excluídos com sucesso!");
         System.out.println("Deseja Resetar a numeração dos produtos?");
         delete = num.next().toLowerCase();
